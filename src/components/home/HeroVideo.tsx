@@ -29,7 +29,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ onNavigate }) => {
         /* Fallback High Quality GIF Visual */
         <img
           src={gifSrc}
-          alt="Bespoke Luxury Wedding"
+          alt="United Stories by Arun — Cinematic Wedding Photography"
           className="absolute inset-0 w-full h-full object-cover"
         />
       )}
@@ -46,7 +46,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ onNavigate }) => {
             {siteConfig.businessTagline}
           </p>
           <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-white/90 font-light drop-shadow">
-            {siteConfig.location} — Luxury Wedding & Event Studio
+            {siteConfig.location} — Cinematic Wedding & Fine Art Photography Studio
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ onNavigate }) => {
             onClick={() => onNavigate('/contact')}
             className="btn-terracotta py-3.5 px-7 text-xs tracking-[0.2em] shadow-xl"
           >
-            <Calendar size={15} /> Inquire Now
+            <Calendar size={15} /> Book a Consultation
           </button>
         </div>
 

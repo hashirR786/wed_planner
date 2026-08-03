@@ -18,11 +18,11 @@ export const IntroWeddings: React.FC<IntroWeddingsProps> = ({ onNavigate }) => {
             {/* Left Column: Heading & Editorial Badge */}
             <div className="lg:col-span-5 space-y-4">
               <span className="text-xs uppercase tracking-[0.25em] text-[#C87D65] font-semibold block">
-                Our Signature Services
+                Signature Photography
               </span>
               <h2 className="font-serif text-4xl sm:text-5xl text-[#2C2A29] leading-tight">
-                Bespoke Celebrations, <br />
-                <span className="italic font-normal text-[#2C4A3E]">Effortlessly Curated.</span>
+                Authentic Stories, <br />
+                <span className="italic font-normal text-[#2C4A3E]">Cinematically Preserved.</span>
               </h2>
               <div className="w-16 h-[2px] bg-[#C87D65]" />
             </div>
@@ -30,7 +30,7 @@ export const IntroWeddings: React.FC<IntroWeddingsProps> = ({ onNavigate }) => {
             {/* Right Column: Short Paragraph + Animated Stats Counters + CTA */}
             <div className="lg:col-span-7 space-y-6">
               <p className="text-base sm:text-lg text-[#65605C] font-light leading-relaxed">
-                We specialize in creating refined, high-end weddings that blend quiet luxury with authentic emotion. From grand estate ceremonies in {siteConfig.location} to intimate multi-day international celebrations, our studio orchestrates every detail with artistic precision and heart.
+                Based in {siteConfig.location}, United Stories by Arun specializes in cinematic, emotional, and fine art wedding and couple photography. From grand London venue celebrations to intimate milestone sessions like maternity and graduation, we document honest human connection with artistic heart.
               </p>
 
               {/* Animated Stats Counters */}
@@ -41,7 +41,7 @@ export const IntroWeddings: React.FC<IntroWeddingsProps> = ({ onNavigate }) => {
                     suffix="+"
                     className="font-serif text-4xl text-[#2C4A3E] font-medium block"
                   />
-                  <span className="text-xs text-[#65605C] font-light uppercase tracking-wider block">Weddings Planned</span>
+                  <span className="text-xs text-[#65605C] font-light uppercase tracking-wider block">Stories Documented</span>
                 </div>
                 <div className="space-y-1">
                   <AnimatedCounter
@@ -66,7 +66,7 @@ export const IntroWeddings: React.FC<IntroWeddingsProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('/weddings')}
                   className="btn-primary"
                 >
-                  Explore Wedding Services <ArrowUpRight size={16} />
+                  Explore Photography Offerings <ArrowUpRight size={16} />
                 </button>
               </div>
             </div>
