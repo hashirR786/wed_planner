@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light;
+  /* 'only' keyword tells browsers this page ONLY supports light mode —
+     prevents Android Chrome Force Dark, iOS Safari auto-darkening, etc. */
+  color-scheme: light only;
+  supported-color-schemes: light;
   --bg-primary: #FDFBF7;
   --bg-secondary: #F7F3EC;
   --bg-accent: #EFEAE1;
@@ -18,13 +21,38 @@
   --font-signature: 'Caveat', 'Sacramento', cursive;
 }
 
+html {
+  color-scheme: light only !important;
+}
+
 html, body {
-  color-scheme: light !important;
   background-color: #FDFBF7 !important;
   color: #2C2A29 !important;
   font-family: var(--font-sans);
   overflow-x: hidden;
   line-height: 1.6;
+}
+
+/* Force light mode even when OS/browser dark mode is active.
+   This overrides Android Chrome 'Force Dark', iOS Dark Mode, Samsung Internet dark filter, etc. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light only !important;
+  }
+  html, body {
+    background-color: #FDFBF7 !important;
+    color: #2C2A29 !important;
+  }
+  /* Prevent any browser-level CSS filter inversion on the root */
+  html {
+    filter: none !important;
+    -webkit-filter: none !important;
+  }
+  /* Restore section backgrounds that might get inverted */
+  section, main, header, footer, div, article, nav, aside {
+    background-color: inherit;
+    color: inherit;
+  }
 }
 
 /* Typography Utility Classes */
