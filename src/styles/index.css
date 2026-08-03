@@ -1,10 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  /* 'only' keyword tells browsers this page ONLY supports light mode —
-     prevents Android Chrome Force Dark, iOS Safari auto-darkening, etc. */
-  color-scheme: light only;
-  supported-color-schemes: light;
+  color-scheme: light dark;
+  supported-color-schemes: light dark;
   --bg-primary: #FDFBF7;
   --bg-secondary: #F7F3EC;
   --bg-accent: #EFEAE1;
@@ -21,37 +19,70 @@
   --font-signature: 'Caveat', 'Sacramento', cursive;
 }
 
-html {
-  color-scheme: light only !important;
-}
-
 html, body {
-  background-color: #FDFBF7 !important;
-  color: #2C2A29 !important;
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
   font-family: var(--font-sans);
   overflow-x: hidden;
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Force light mode even when OS/browser dark mode is active.
-   This overrides Android Chrome 'Force Dark', iOS Dark Mode, Samsung Internet dark filter, etc. */
+/* Elegant Native Dark Mode Support for devices with dark mode / force dark active */
 @media (prefers-color-scheme: dark) {
   :root {
-    color-scheme: light only !important;
+    --bg-primary: #141312;
+    --bg-secondary: #1C1B1A;
+    --bg-accent: #262422;
+    --text-dark: #FDFBF7;
+    --text-muted: #B8B2AC;
+    --color-green-dark: #4E7A68;
+    --color-green-light: #62947F;
+    --color-terracotta: #D98A72;
+    --color-terracotta-dark: #C87D65;
   }
+
   html, body {
-    background-color: #FDFBF7 !important;
-    color: #2C2A29 !important;
+    background-color: #141312 !important;
+    color: #FDFBF7 !important;
   }
-  /* Prevent any browser-level CSS filter inversion on the root */
-  html {
-    filter: none !important;
-    -webkit-filter: none !important;
+
+  /* Override hardcoded background & text utility classes for dark mode */
+  .bg-\[\#FDFBF7\] {
+    background-color: #141312 !important;
   }
-  /* Restore section backgrounds that might get inverted */
-  section, main, header, footer, div, article, nav, aside {
-    background-color: inherit;
-    color: inherit;
+  .bg-\[\#F7F3EC\] {
+    background-color: #1C1B1A !important;
+  }
+  .bg-\[\#EFEAE1\] {
+    background-color: #262422 !important;
+  }
+  .bg-\[\#FDFBF7\]\/95 {
+    background-color: rgba(20, 19, 18, 0.95) !important;
+  }
+
+  .text-\[\#2C2A29\] {
+    color: #FDFBF7 !important;
+  }
+  .text-\[\#65605C\] {
+    color: #B8B2AC !important;
+  }
+  .text-\[\#2C4A3E\] {
+    color: #62947F !important;
+  }
+
+  /* Borders & Shadows in Dark Mode */
+  .border-\[\#2C4A3E\]\/10, 
+  .border-\[\#2C4A3E\]\/15, 
+  .border-\[\#2C4A3E\]\/20 {
+    border-color: rgba(255, 255, 255, 0.12) !important;
+  }
+
+  /* Card backgrounds in dark mode */
+  .bg-\[\#FDFBF7\].rounded-2xl,
+  .bg-\[\#F7F3EC\].rounded-2xl {
+    background-color: #1C1B1A !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
   }
 }
 
