@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: light dark;
-  supported-color-schemes: light dark;
+  /* light only = browser must never auto-darken this page,
+     including Android Force Dark and iOS auto-dark */
+  color-scheme: light only;
   --bg-primary: #FDFBF7;
   --bg-secondary: #F7F3EC;
   --bg-accent: #EFEAE1;
@@ -19,71 +20,27 @@
   --font-signature: 'Caveat', 'Sacramento', cursive;
 }
 
+html {
+  /* Tells Chrome/Samsung/Firefox: this page has no dark variant, don't touch it */
+  color-scheme: light only !important;
+  -webkit-text-size-adjust: 100%;
+}
+
 html, body {
-  background-color: var(--bg-primary);
-  color: var(--text-dark);
+  background-color: #FDFBF7 !important;
+  color: #2C2A29 !important;
   font-family: var(--font-sans);
   overflow-x: hidden;
   line-height: 1.6;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Elegant Native Dark Mode Support for devices with dark mode / force dark active */
+/* Safety net: even if the browser tries to apply a dark filter via
+   prefers-color-scheme, we explicitly lock all colours to the light palette */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg-primary: #141312;
-    --bg-secondary: #1C1B1A;
-    --bg-accent: #262422;
-    --text-dark: #FDFBF7;
-    --text-muted: #B8B2AC;
-    --color-green-dark: #4E7A68;
-    --color-green-light: #62947F;
-    --color-terracotta: #D98A72;
-    --color-terracotta-dark: #C87D65;
-  }
-
-  html, body {
-    background-color: #141312 !important;
-    color: #FDFBF7 !important;
-  }
-
-  /* Override hardcoded background & text utility classes for dark mode */
-  .bg-\[\#FDFBF7\] {
-    background-color: #141312 !important;
-  }
-  .bg-\[\#F7F3EC\] {
-    background-color: #1C1B1A !important;
-  }
-  .bg-\[\#EFEAE1\] {
-    background-color: #262422 !important;
-  }
-  .bg-\[\#FDFBF7\]\/95 {
-    background-color: rgba(20, 19, 18, 0.95) !important;
-  }
-
-  .text-\[\#2C2A29\] {
-    color: #FDFBF7 !important;
-  }
-  .text-\[\#65605C\] {
-    color: #B8B2AC !important;
-  }
-  .text-\[\#2C4A3E\] {
-    color: #62947F !important;
-  }
-
-  /* Borders & Shadows in Dark Mode */
-  .border-\[\#2C4A3E\]\/10, 
-  .border-\[\#2C4A3E\]\/15, 
-  .border-\[\#2C4A3E\]\/20 {
-    border-color: rgba(255, 255, 255, 0.12) !important;
-  }
-
-  /* Card backgrounds in dark mode */
-  .bg-\[\#FDFBF7\].rounded-2xl,
-  .bg-\[\#F7F3EC\].rounded-2xl {
-    background-color: #1C1B1A !important;
-    border-color: rgba(255, 255, 255, 0.1) !important;
-  }
+  :root   { color-scheme: light only !important; }
+  html    { filter: none !important; -webkit-filter: none !important;
+            background-color: #FDFBF7 !important; color: #2C2A29 !important; }
+  body    { background-color: #FDFBF7 !important; color: #2C2A29 !important; }
 }
 
 /* Typography Utility Classes */
