@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
   --bg-primary: #FDFBF7;
   --bg-secondary: #F7F3EC;
   --bg-accent: #EFEAE1;
@@ -17,9 +18,10 @@
   --font-signature: 'Caveat', 'Sacramento', cursive;
 }
 
-body {
-  background-color: var(--bg-primary);
-  color: var(--text-dark);
+html, body {
+  color-scheme: light !important;
+  background-color: #FDFBF7 !important;
+  color: #2C2A29 !important;
   font-family: var(--font-sans);
   overflow-x: hidden;
   line-height: 1.6;
