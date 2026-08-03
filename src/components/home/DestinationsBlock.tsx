@@ -53,7 +53,7 @@ export const DestinationsBlock: React.FC<DestinationsBlockProps> = ({ onNavigate
               </h2>
 
               <p className="text-base text-[#65605C] font-light leading-relaxed">
-                Whether you dream of a Renaissance villa in Tuscany, a sun-drenched château in Provence, or a oceanfront cliff terrace on the Amalfi Coast, our international planning expertise ensures your destination wedding is effortless, romantic, and perfectly executed.
+                Whether you dream of a Renaissance villa in Tuscany, a sun-drenched château in Provence, or an oceanfront cliff terrace on the Amalfi Coast, our international photography experience ensures your destination session is captured with effortless fine art beauty.
               </p>
 
               {/* Destination tags */}
@@ -73,7 +73,7 @@ export const DestinationsBlock: React.FC<DestinationsBlockProps> = ({ onNavigate
                   onClick={() => onNavigate('/destinations')}
                   className="btn-terracotta"
                 >
-                  Discover Destination Planning <ArrowRight size={16} />
+                  Discover Destination Photography <ArrowRight size={16} />
                 </button>
               </div>
             </ScrollReveal>

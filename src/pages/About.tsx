@@ -12,8 +12,8 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
   return (
     <>
       <SEO
-        title={`About ${siteConfig.plannerName}`}
-        description={`Learn more about ${siteConfig.plannerName}, creative director and founder of ${siteConfig.businessName}, based in ${siteConfig.location}.`}
+        title={`About ${siteConfig.plannerName} — United Stories by Arun`}
+        description={`Learn more about ${siteConfig.plannerName}, lead photographer and founder of ${siteConfig.businessName}, based in ${siteConfig.location}.`}
       />
 
       <main className="bg-[#FDFBF7]">
@@ -21,7 +21,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
         <PageHeader
           title={`Meet ${siteConfig.plannerName}`}
           subtitle={siteConfig.bio.tagline}
-          badge="Founder & Creative Director"
+          badge="Founder & Lead Photographer"
           backgroundImage={siteConfig.bio.photo}
         />
 
@@ -36,7 +36,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
               </span>
 
               <h2 className="font-serif text-4xl sm:text-5xl text-[#2C2A29] leading-tight">
-                Quiet Luxury, Intentional Design & Deep Heart.
+                Cinematic Light, Authentic Connection & Fine Art Artistry.
               </h2>
 
               <p className="text-base text-[#65605C] font-light leading-relaxed">
@@ -52,7 +52,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
               <div className="pt-4 flex items-center gap-6">
                 <div>
                   <span className="font-script text-4xl text-[#2C4A3E]">{siteConfig.plannerName}</span>
-                  <span className="block text-xs uppercase tracking-widest text-[#65605C] mt-1">Founder & Creative Lead</span>
+                  <span className="block text-xs uppercase tracking-widest text-[#65605C] mt-1">Founder & Lead Photographer</span>
                 </div>
               </div>
             </div>
@@ -60,9 +60,9 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl img-zoom-container aspect-[4/5] border border-[#2C4A3E]/10">
                 <img
-                  src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80"
-                  alt="Wedding planning design consultation"
-                  className="w-full h-full object-cover"
+                  src={siteConfig.bio.photo}
+                  alt={`Portrait of ${siteConfig.plannerName}`}
+                  className="w-full h-full object-cover brightness-105 contrast-105"
                 />
               </div>
             </div>
@@ -70,19 +70,19 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
           </div>
         </section>
 
-        {/* Our 3-Step Planning Philosophy */}
+        {/* Our 3-Pillar Photography Philosophy */}
         <section className="py-20 bg-[#F7F3EC] border-y border-[#2C4A3E]/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
               <span className="text-xs uppercase tracking-[0.25em] text-[#C87D65] font-semibold flex items-center justify-center gap-2">
                 <Compass size={16} className="text-[#2C4A3E]" />
-                Our Approach
+                Our Photography Approach
               </span>
               <h2 className="font-serif text-4xl sm:text-5xl text-[#2C2A29]">
-                The Three Pillars of Our Process
+                The Three Pillars of Our Artistry
               </h2>
               <p className="text-base text-[#65605C] font-light">
-                How we turn ambitious aesthetic visions into serene, seamlessly executed wedding weekends.
+                How we capture emotional, fine art imagery that feels honest, artistic, and timeless.
               </p>
             </div>
 
@@ -91,27 +91,27 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
               {/* Step 1 */}
               <div className="bg-[#FDFBF7] p-8 rounded-2xl border border-[#2C4A3E]/10 space-y-4 shadow-sm relative">
                 <span className="font-serif text-5xl text-[#C87D65]/40 font-bold block">01</span>
-                <h3 className="font-serif text-2xl text-[#2C2A29]">Vision & Art Direction</h3>
+                <h3 className="font-serif text-2xl text-[#2C2A29]">Connection & Comfort</h3>
                 <p className="text-sm text-[#65605C] font-light leading-relaxed">
-                  We curate a cohesive color story, spatial layout, floral installation concept, and custom tactile element palette that reflects your distinct style.
+                  Establishing genuine rapport so you feel completely relaxed, present, and free to be yourselves in front of the lens.
                 </p>
               </div>
 
               {/* Step 2 */}
               <div className="bg-[#FDFBF7] p-8 rounded-2xl border border-[#2C4A3E]/10 space-y-4 shadow-sm relative">
                 <span className="font-serif text-5xl text-[#C87D65]/40 font-bold block">02</span>
-                <h3 className="font-serif text-2xl text-[#2C2A29]">Curation & Alignment</h3>
+                <h3 className="font-serif text-2xl text-[#2C2A29]">Light & Composition</h3>
                 <p className="text-sm text-[#65605C] font-light leading-relaxed">
-                  Connecting you with premier international photographers, Michelin-level caterers, and floral artists whose standards match your elevated expectations.
+                  Harnessing natural golden hour warmth, classic stone shadow play, and fine-art framing for poetic visual storytelling.
                 </p>
               </div>
 
               {/* Step 3 */}
               <div className="bg-[#FDFBF7] p-8 rounded-2xl border border-[#2C4A3E]/10 space-y-4 shadow-sm relative">
                 <span className="font-serif text-5xl text-[#C87D65]/40 font-bold block">03</span>
-                <h3 className="font-serif text-2xl text-[#2C2A29]">Flawless Production</h3>
+                <h3 className="font-serif text-2xl text-[#2C2A29]">Storytelling & Curation</h3>
                 <p className="text-sm text-[#65605C] font-light leading-relaxed">
-                  Our on-site command team manages multi-day vendor arrivals, guest transit, and master timing so you can be completely present.
+                  Handcrafting rich filmic color grading and delivering full high-resolution digital galleries and handcrafted leather print albums.
                 </p>
               </div>
 
@@ -122,7 +122,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
         {/* CTA Banner */}
         <section className="py-20 text-center max-w-4xl mx-auto px-4">
           <h2 className="font-serif text-3xl sm:text-4xl text-[#2C2A29] mb-6">
-            Ready to discuss your wedding vision with {siteConfig.plannerName}?
+            Ready to discuss your photography session with {siteConfig.plannerName}?
           </h2>
           <button
             onClick={() => onNavigate('/contact')}

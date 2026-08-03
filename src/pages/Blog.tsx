@@ -21,15 +21,15 @@ export const Blog: React.FC<BlogProps> = ({ onNavigate }) => {
   return (
     <>
       <SEO
-        title="Journal & Editorial Wedding Planning Guides"
-        description="Curated wedding planning advice, color trend previews, and destination guides by [BUSINESS NAME]."
+        title="Journal & Photography Guides — United Stories by Arun"
+        description={`Curated photography advice, lighting guides, destination session inspiration, and story spotlights by ${siteConfig.businessName}.`}
       />
 
       <main className="bg-[#FDFBF7]">
         <PageHeader
           title="The Editorial Journal"
-          subtitle="Refined insights, destination planning advice, tablescape design, and wedding inspiration."
-          badge="Planning Journal"
+          subtitle="Refined insights, golden hour lighting advice, couple portraiture guides, and destination session inspiration."
+          badge="Photography Journal"
           backgroundImage="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=80"
         />
 

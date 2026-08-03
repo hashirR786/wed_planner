@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
 
 export const Testimonials: React.FC = () => {
@@ -32,13 +32,6 @@ export const Testimonials: React.FC = () => {
 
         {/* Dynamic Testimonial Content */}
         <div className="min-h-[300px] flex flex-col justify-center animate-fade-in key={current.id}">
-          
-          {/* Rating Stars */}
-          <div className="flex justify-center gap-1 mb-4 text-[#D4AF37]">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={18} className="fill-current" />
-            ))}
-          </div>
 
           {/* Pull Quote Headline */}
           <h3 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#E09F87] mb-6 italic tracking-tight">

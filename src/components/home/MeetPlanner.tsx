@@ -19,13 +19,13 @@ export const MeetPlanner: React.FC<MeetPlannerProps> = ({ onNavigate }) => {
               <div className="space-y-2">
                 <span className="text-xs uppercase tracking-[0.25em] text-[#C87D65] font-semibold flex items-center gap-2">
                   <Heart size={14} className="fill-current text-[#C87D65]" />
-                  Meet Creative Director
+                  Meet The Photographer
                 </span>
                 <h2 className="font-serif text-4xl sm:text-5xl text-[#2C2A29] leading-tight">
                   Meet {siteConfig.plannerName}
                 </h2>
                 <span className="font-script text-3xl text-[#2C4A3E] block pt-1">
-                  Founder & Lead Planner
+                  Founder & Lead Photographer
                 </span>
               </div>
 
@@ -35,7 +35,7 @@ export const MeetPlanner: React.FC<MeetPlannerProps> = ({ onNavigate }) => {
               </p>
 
               <p className="text-sm text-[#65605C] font-light leading-relaxed mt-4">
-                I view every wedding as an artistic canvas. My goal is to ensure you feel entirely cherished, relaxed, and present, knowing every candle, timeline detail, and floral petal is curated with intention.
+                I view every session as a cinematic story. My goal is to capture raw human connection, genuine emotion, and natural light so you receive images that feel timeless, authentic, and deeply personal.
               </p>
 
               <div className="pt-6">
@@ -49,7 +49,7 @@ export const MeetPlanner: React.FC<MeetPlannerProps> = ({ onNavigate }) => {
             </ScrollReveal>
           </div>
 
-          {/* Right Column: Planner Portrait */}
+          {/* Right Column: Photographer Portrait */}
           <div className="lg:col-span-6 order-1 lg:order-2 flex justify-center">
             <ScrollReveal variant="scale-up" duration={900} delay={150}>
               <div className="relative max-w-md w-full">
@@ -61,14 +61,8 @@ export const MeetPlanner: React.FC<MeetPlannerProps> = ({ onNavigate }) => {
                   <img
                     src={siteConfig.bio.photo}
                     alt={`Portrait of ${siteConfig.plannerName}`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover brightness-105 contrast-105"
                   />
-                </div>
-
-                {/* Small Overlay Badge */}
-                <div className="absolute bottom-6 right-6 bg-[#FDFBF7] px-5 py-3 rounded-xl shadow-lg border border-[#2C4A3E]/10 text-center">
-                  <span className="font-serif text-xl text-[#2C4A3E] block font-semibold">10+ Years</span>
-                  <span className="text-[10px] uppercase tracking-widest text-[#65605C]">Curating Luxury Celebrations</span>
                 </div>
               </div>
             </ScrollReveal>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SEO } from '../components/ui/SEO';
 import { PageHeader } from '../components/shared/PageHeader';
 import { siteConfig } from '../config/siteConfig';
-import { Check, HelpCircle, ChevronDown, Calculator, ArrowRight } from 'lucide-react';
+import { Check, HelpCircle, ChevronDown } from 'lucide-react';
 
 interface ServicesProps {
   onNavigate: (path: string) => void;
@@ -11,45 +11,41 @@ interface ServicesProps {
 export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
-  // Interactive Package Calculator State
-  const [guestCount, setGuestCount] = useState<string>('100-150');
-  const [eventDuration, setEventDuration] = useState<string>('Single Day');
-
   const faqs = [
     {
-      q: "How far in advance should we book your wedding planning services?",
-      a: "We recommend booking 10 to 16 months prior to your desired wedding date, especially for destination weddings in Italy or France. However, we occasionally accommodate shorter timelines depending on availability."
+      q: "How far in advance should we book our photography session?",
+      a: "We recommend booking wedding photography 8 to 14 months prior to your date. For London couple sessions, fine-art maternity, and graduation milestone shoots, we recommend booking 4 to 8 weeks in advance."
     },
     {
-      q: "How many weddings does your studio take each year?",
-      a: "To ensure every couple receives our undivided creative focus, prompt communication, and flawless on-site presence, we strictly cap our annual intake to 10-12 celebrations per calendar year."
+      q: "How many sessions or weddings does your studio accept each year?",
+      a: "To ensure every story receives our undivided creative focus, prompt communication, and handcrafted post-processing, we cap our annual intake to 15 weddings and select portrait sessions per year."
     },
     {
-      q: "Do you travel for destination weddings?",
-      a: "Absolutely. Over half of our annual portfolio comprises destination celebrations across Lake Como, Provence, Amalfi, Napa Valley, and Caribbean estates."
+      q: "Do you travel for destination weddings and couple shoots?",
+      a: "Yes! Based in London, we regularly photograph weddings, elopements, and couple portrait sessions across Lake Como, Paris, Provence, Amalfi Coast, and worldwide locations."
     },
     {
-      q: "Can we customize a package if our needs don't fit standard tiers?",
-      a: "Yes! Every love story and venue is unique. Following our initial discovery call, we prepare a custom proposal tailored precisely to your guest count, multi-day schedule, and design ambitions."
+      q: "How and when will we receive our final photography gallery?",
+      a: "Sneak peek highlights are delivered within 48 to 72 hours. Your complete, fully edited high-resolution private online gallery is delivered within 4 to 6 weeks, complete with full personal printing rights."
     }
   ];
 
   return (
     <>
       <SEO
-        title="Wedding Planning Services & Pricing"
-        description="Comprehensive full planning, editorial design, and destination wedding orchestration by [BUSINESS NAME]."
+        title="Photography Offerings & Pricing — United Stories by Arun"
+        description={`Cinematic wedding, couple, maternity, and graduation photography collections by ${siteConfig.businessName} in ${siteConfig.location} and worldwide.`}
       />
 
       <main className="bg-[#FDFBF7]">
         <PageHeader
-          title="Wedding Services & Offerings"
-          subtitle="Bespoke planning, editorial styling, and global event orchestration tailored to your aesthetic."
-          badge="White Glove Experience"
+          title="Photography Offerings"
+          subtitle="Bespoke wedding photography, intimate couple sessions, fine-art maternity portraiture, and graduation milestone coverage."
+          badge="Signature Collections"
           backgroundImage="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=80"
         />
 
-        {/* 3 Primary Service Cards */}
+        {/* 3 Primary Photography Service Cards */}
         <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {siteConfig.services.map((service) => (
@@ -73,7 +69,7 @@ export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
 
                   <div className="pt-2 border-t border-[#2C4A3E]/10">
                     <span className="text-xs uppercase tracking-widest text-[#C87D65] block font-medium">Starting Investment</span>
-                    <span className="font-serif text-2xl text-[#2C4A3E] font-semibold">{service.priceStarting}</span>
+                    <span className="font-serif text-2xl text-[#2C2A29] font-semibold">{service.priceStarting}</span>
                   </div>
 
                   <p className="text-sm text-[#65605C] font-light leading-relaxed">{service.description}</p>
@@ -96,7 +92,7 @@ export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
                       service.badge ? 'btn-primary justify-center' : 'btn-secondary justify-center'
                     }`}
                   >
-                    Inquire About Service
+                    Inquire About Collection
                   </button>
                 </div>
               </div>
@@ -104,77 +100,8 @@ export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
           </div>
         </section>
 
-        {/* Interactive Custom Bespoke Estimator Tool */}
-        <section className="py-20 bg-[#F7F3EC] border-y border-[#2C4A3E]/10">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10 space-y-2">
-              <span className="text-xs uppercase tracking-widest text-[#C87D65] font-semibold flex items-center justify-center gap-2">
-                <Calculator size={16} className="text-[#2C4A3E]" />
-                Interactive Guidance
-              </span>
-              <h2 className="font-serif text-3xl sm:text-4xl text-[#2C2A29]">
-                Find Your Service Match
-              </h2>
-              <p className="text-sm text-[#65605C] font-light">
-                Select your celebration parameters to see our recommended planning scope.
-              </p>
-            </div>
-
-            <div className="bg-[#FDFBF7] p-8 rounded-3xl border border-[#2C4A3E]/10 space-y-6 shadow-md">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#2C2A29] mb-2">Estimated Guest Count</label>
-                  <select
-                    value={guestCount}
-                    onChange={(e) => setGuestCount(e.target.value)}
-                    className="w-full bg-[#F7F3EC] border border-[#2C4A3E]/20 rounded-xl px-4 py-3 text-xs text-[#2C2A29] focus:outline-none"
-                  >
-                    <option value="Under 50">Under 50 (Intimate)</option>
-                    <option value="50-100">50 - 100 Guests</option>
-                    <option value="100-150">100 - 150 Guests</option>
-                    <option value="150+">150+ Grand Celebration</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold uppercase tracking-wider text-[#2C2A29] mb-2">Event Duration</label>
-                  <select
-                    value={eventDuration}
-                    onChange={(e) => setEventDuration(e.target.value)}
-                    className="w-full bg-[#F7F3EC] border border-[#2C4A3E]/20 rounded-xl px-4 py-3 text-xs text-[#2C2A29] focus:outline-none"
-                  >
-                    <option value="Single Day">Single Day Wedding</option>
-                    <option value="2 Days">2 Days (Welcome Party + Wedding)</option>
-                    <option value="3+ Days Weekend">3+ Days Full Weekend Experience</option>
-                  </select>
-                </div>
-              </div>
-
-              {/* Recommendation Box */}
-              <div className="p-6 bg-[#2C4A3E] text-[#FDFBF7] rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div>
-                  <span className="text-[10px] uppercase tracking-widest text-[#E09F87] font-semibold">Recommended Package</span>
-                  <h4 className="font-serif text-2xl text-white">
-                    {eventDuration.includes('3+')
-                      ? 'Destination & Multi-Day Celebrations'
-                      : guestCount === 'Under 50'
-                      ? 'Design & Partial Orchestration'
-                      : 'Full Planning & Editorial Design'}
-                  </h4>
-                </div>
-                <button
-                  onClick={() => onNavigate('/contact')}
-                  className="btn-terracotta text-xs py-3 px-6 shrink-0"
-                >
-                  Request Exact Proposal <ArrowRight size={14} />
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* FAQ Accordion */}
-        <section className="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#2C4A3E]/10">
           <div className="text-center mb-12 space-y-2">
             <span className="text-xs uppercase tracking-widest text-[#C87D65] font-semibold flex items-center justify-center gap-2">
               <HelpCircle size={16} className="text-[#2C4A3E]" />

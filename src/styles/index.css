@@ -13,7 +13,8 @@
   --color-gold: #D4AF37;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  --font-script: 'Pinyon Script', cursive;
+  --font-script: 'Great Vibes', 'Parisienne', 'Alex Brush', cursive;
+  --font-signature: 'Caveat', 'Sacramento', cursive;
 }
 
 body {
@@ -35,6 +36,15 @@ body {
 
 .font-script {
   font-family: var(--font-script);
+}
+
+.font-signature {
+  font-family: var(--font-signature);
+}
+
+.font-brand-signature {
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
 }
 
 .heading-editorial {

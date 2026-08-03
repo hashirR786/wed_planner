@@ -29,28 +29,18 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
   // Mega-menu popups data
   const popups: Record<string, { title: string; items: { label: string; sub: string; path: string }[] }> = {
     '/weddings': {
-      title: 'Our Wedding Offerings',
+      title: 'Our Photography Collections',
       items: [
-        { label: 'Full Planning & Editorial Design', sub: 'White-glove end-to-end orchestration', path: '/weddings' },
-        { label: 'Design & Partial Styling', sub: 'Artistic direction & vendor alignment', path: '/weddings' },
-        { label: 'Destination Weddings', sub: 'Multi-day global celebrations', path: '/destinations' },
-      ],
-    },
-    '/destinations': {
-      title: 'Featured Global Regions',
-      items: [
-        { label: 'Lake Como & Tuscany', sub: 'Historic villas & lakeside banquets', path: '/destinations' },
-        { label: 'Provence & French Riviera', sub: 'Château gardens & lavenders', path: '/destinations' },
-        { label: 'Amalfi Coast & Capri', sub: 'Cliffside sea views & terraces', path: '/destinations' },
-        { label: 'Napa Valley & Big Sur', sub: 'Organic wine country estate luxury', path: '/destinations' },
+        { label: 'Cinematic Wedding Stories', sub: 'Full day fine art coverage & bespoke album', path: '/weddings' },
+        { label: 'Couple & Engagement Sessions', sub: 'Intimate portraiture across London', path: '/portfolio?category=Couples' },
       ],
     },
     '/portfolio': {
-      title: 'Featured Real Stories',
+      title: 'Featured Galleries',
       items: [
-        { label: 'Genevieve & Alexander', sub: 'Villa Balbiano, Lake Como', path: '/portfolio' },
-        { label: 'Camille & Julian', sub: 'Château de Tourreau, Provence', path: '/portfolio' },
-        { label: 'Sophia & Harrison', sub: 'Ravello Terrace, Amalfi', path: '/portfolio' },
+        { label: 'Couple Sessions (Pre-Wedding)', sub: 'London golden hour & romantic portraiture', path: '/portfolio?category=Couples' },
+        { label: 'Fine Art Maternity', sub: 'Authentic life milestone sessions', path: '/portfolio?category=Maternity' },
+        { label: 'Graduation Milestone', sub: 'Academic distinction portraiture', path: '/portfolio?category=Graduation' },
       ],
     },
   };
@@ -59,9 +49,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Weddings', path: '/weddings', hasPopup: true },
-    { name: 'Destinations', path: '/destinations', hasPopup: true },
     { name: 'Our Work', path: '/portfolio', hasPopup: true },
-    { name: 'Blog', path: '/blog' },
     { name: 'Events', path: '/events' },
   ];
 
@@ -70,31 +58,34 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? 'glass-header-scrolled py-3 text-[#2C2A29]'
+            ? 'glass-header-scrolled py-2.5 text-[#2C2A29] opacity-100'
             : isHome
-            ? 'bg-gradient-to-b from-black/70 via-black/30 to-transparent py-5 text-white'
-            : 'bg-[#FDFBF7]/95 backdrop-blur-md py-4 text-[#2C2A29] border-b border-[#2C4A3E]/10'
+            ? 'opacity-0 pointer-events-none py-4'
+            : 'bg-[#FDFBF7]/95 backdrop-blur-md py-3.5 text-[#2C2A29] border-b border-[#2C4A3E]/10 opacity-100'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             
-            {/* Left: Brand Logo */}
+            {/* Left: Brand Logo — transparent PNG (removebg) */}
             <button
               onClick={() => onNavigate('/')}
-              className="text-left group focus:outline-none transition-transform duration-300 hover:scale-[1.02]"
+              className="text-left group focus:outline-none transition-transform duration-300 hover:scale-[1.03]"
+              aria-label="United Stories by Arun"
             >
-              <span className={`block font-serif text-2xl sm:text-3xl tracking-widest uppercase transition-colors ${
-                isScrolled || !isHome ? 'text-[#2C2A29]' : 'text-white'
-              }`}>
-                {siteConfig.businessName}
-              </span>
-              <span className={`block text-[10px] tracking-[0.25em] uppercase font-light -mt-1 transition-colors ${
-                isScrolled || !isHome ? 'text-[#65605C]' : 'text-white/80'
-              }`}>
-                {siteConfig.location} — Wedding Studio
-              </span>
+              <img
+                src="/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png"
+                alt="United Stories by Arun"
+                style={{
+                  height: '110px',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  transition: 'all 0.3s',
+                  filter: isScrolled || !isHome ? 'brightness(0)' : 'brightness(0) invert(1)',
+                }}
+              />
             </button>
+
 
             {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex items-center space-x-6">
@@ -209,12 +200,16 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
           {/* Header Inside Mobile Drawer */}
           <div className="flex items-center justify-between px-6 py-5 border-b border-[#2C4A3E]/10">
             <div>
-              <span className="font-serif text-2xl tracking-widest text-[#2C2A29]">
-                {siteConfig.businessName}
-              </span>
-              <span className="block text-[10px] uppercase tracking-widest text-[#65605C]">
-                {siteConfig.location}
-              </span>
+              <img
+                src="/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png"
+                alt="United Stories by Arun"
+                style={{
+                  height: '80px',
+                  width: 'auto',
+                  objectFit: 'contain',
+                  filter: 'brightness(0)',
+                }}
+              />
             </div>
             <button
               onClick={() => setMobileMenuOpen(false)}
@@ -253,7 +248,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
                 }}
                 className="w-full btn-terracotta justify-center text-center py-3.5 text-xs tracking-widest"
               >
-                Inquire With Studio
+                Book a Consultation
               </button>
 
               <div className="flex items-center space-x-6 pt-4 text-xs text-[#65605C]">

@@ -1,3 +1,5 @@
+import generatedPortfolio from './generated_portfolio.json';
+
 export interface Testimonial {
   id: string;
   pullQuote: string;
@@ -53,11 +55,6 @@ export interface Destination {
   highlights: string[];
 }
 
-export interface HeroGifItem {
-  src: string;
-  durationMs: number;
-}
-
 export const siteConfig = {
   businessName: "United Stories by Arun",
   businessTagline: "Authentic, Emotional & Fine Art Imagery",
@@ -67,17 +64,12 @@ export const siteConfig = {
   location: "London, UK",
   email: "hello@unitedstoriesbyarun.com",
   phone: "+44 (0) 20 7946 0912",
-  instagram: "@unitedstoriesbyarun",
+  instagram: "https://www.instagram.com/united_stories_by__arun/",
   facebook: "facebook.com/unitedstoriesbyarun",
   pinterest: "pinterest.com/unitedstoriesbyarun",
 
-  // Set heroVideoSrc to an MP4 video file path when provided by client
-  heroVideoSrc: undefined as string | undefined,
-
-  // GIF fallback hero background
-  heroGifs: [
-    { src: "/weddinggif.gif", durationMs: 3400 },
-  ] as HeroGifItem[],
+  // Using Video-87580.mp4 exclusively for the hero background
+  heroVideoSrc: "/Video-87580.mp4",
 
   bio: {
     tagline: "Capturing authentic human connection through a cinematic, fine art lens.",
@@ -86,7 +78,7 @@ export const siteConfig = {
       "I believe that true photography isn't posed — it's felt. Whether I'm documenting a grand wedding in London, an intimate couple session along the Thames, or celebrating life milestones like maternity and graduation, my goal is to create imagery that evokes deep emotion for generations.",
       "My team and I work closely with every couple and family to ensure a relaxed, natural environment where your genuine story shines through effortlessly."
     ],
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80"
+    photo: "/arun.webp"
   },
 
   heroSlides: [
@@ -121,42 +113,34 @@ export const siteConfig = {
       id: "wedding-photography",
       title: "Cinematic Wedding Photography",
       subtitle: "Full-day wedding documentation with fine art editorial curation",
-      priceStarting: "From £2,500",
+      priceStarting: "Inquire for Pricing",
       badge: "Signature Collection",
-      description: "Our signature service covering complete wedding day storytelling, prep to late night dancing, full high-res digital gallery, and bespoke fine art album.",
+      description: "Bespoke full-day wedding documentation tailored to your vision.",
       features: [
-        "Full day coverage by Arun & secondary shooter",
-        "Pre-wedding consultation & timeline planning",
-        "High-resolution edited digital gallery with full printing rights",
-        "Handcrafted luxury leather fine art album",
-        "Complimentary engagement session in London",
-        "Online private gallery for family & guests"
+        "To be filled",
+        "Custom photography quote on request"
       ]
     },
     {
       id: "couple-sessions",
       title: "Couple & Engagement Stories",
-      subtitle: "Intimate, cinematic couple portraiture across London's iconic landscapes",
-      priceStarting: "From £550",
-      description: "Relaxed, authentic couple portrait sessions designed to capture your unique dynamic in natural light across London or destination spots.",
+      subtitle: "Intimate, cinematic couple portraiture across London",
+      priceStarting: "Inquire for Pricing",
+      description: "Intimate couple and engagement portraiture across London.",
       features: [
-        "2 to 3 hour romantic portrait experience",
-        "Multiple location setups & outfit guidance",
-        "50+ retouched high-resolution digital images",
-        "Sneak peek gallery delivered within 48 hours"
+        "To be filled",
+        "Custom photography quote on request"
       ]
     },
     {
-      id: "destination-weddings",
-      title: "Destination Weddings & Elopements",
-      subtitle: "Worldwide coverage for couples marrying outside the UK",
-      priceStarting: "Custom Global",
-      description: "Bringing our London fine art aesthetic to villas in Lake Como, châteaux in France, or cliffside terraces in Amalfi.",
+      id: "maternity-graduation",
+      title: "Maternity & Graduation Milestones",
+      subtitle: "Authentic portrait sessions capturing personal & family milestones",
+      priceStarting: "Inquire for Pricing",
+      description: "Fine-art maternity and graduation milestone portraiture.",
       features: [
-        "Multi-day event coverage (Welcome dinner, Wedding & Day-after)",
-        "Travel & accommodation logistics managed by our team",
-        "Pre-wedding scouting of local light & venue backdrops",
-        "Bespoke boxed fine art print collection"
+        "To be filled",
+        "Custom photography quote on request"
       ]
     }
   ] as ServiceTier[],
@@ -196,74 +180,7 @@ export const siteConfig = {
     }
   ] as Destination[],
 
-  portfolio: [
-    {
-      id: "p1",
-      title: "Genevieve & Alexander",
-      category: "Weddings",
-      location: "Kensington Palace & Villa Balbiano",
-      image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
-      guestCount: "140 Guests",
-      description: "An emotional, fine art wedding story featuring white garden roses, romantic candlelit dining, and a lakeside fireworks finale.",
-      photographer: "United Stories by Arun",
-      featured: true
-    },
-    {
-      id: "p2",
-      title: "Camille & Julian",
-      category: "Couples",
-      location: "Mayfair & Hyde Park, London",
-      image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80",
-      guestCount: "Intimate Couple Session",
-      description: "A cinematic golden hour couple session wandering through autumn light in Mayfair and Hyde Park.",
-      photographer: "United Stories by Arun",
-      featured: true
-    },
-    {
-      id: "p3",
-      title: "Eleanor's Glow",
-      category: "Maternity",
-      location: "Richmond Park & Studio, London",
-      image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1200&q=80",
-      guestCount: "Maternity Story",
-      description: "An authentic, emotional fine art maternity portrait session celebrating new life in warm natural sunlight.",
-      photographer: "United Stories by Arun",
-      featured: true
-    },
-    {
-      id: "p4",
-      title: "Oxford Honors",
-      category: "Graduation",
-      location: "Oxford University & London",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
-      guestCount: "Graduation Milestone",
-      description: "A triumphant, timeless graduation portrait session capturing academic achievement with fine art polish.",
-      photographer: "United Stories by Arun",
-      featured: true
-    },
-    {
-      id: "p5",
-      title: "Sophia & Harrison",
-      category: "Weddings",
-      location: "Belmond Hotel Caruso, Ravello",
-      image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1200&q=80",
-      guestCount: "85 Guests",
-      description: "Cliffside intimacy overlooking the Tyrrhenian Sea with organic florals, hand-painted details, and emotional vow exchanges.",
-      photographer: "United Stories by Arun",
-      featured: true
-    },
-    {
-      id: "p6",
-      title: "Victoria & Marcus",
-      category: "Fine Art",
-      location: "Somerset House, London",
-      image: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1200&q=80",
-      guestCount: "Fine Art Session",
-      description: "Editorial fine art portraiture utilizing classical stone shadows and soft natural light.",
-      photographer: "United Stories by Arun",
-      featured: true
-    }
-  ] as PortfolioItem[],
+  portfolio: generatedPortfolio as PortfolioItem[],
 
   testimonials: [
     {
@@ -356,7 +273,7 @@ export const siteConfig = {
     {
       id: "e2",
       title: "Graduation & Academic Honors",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=80",
+      image: "/portfolio/graduation/07.webp",
       description: "Timeless, dignified graduation portraits for students and families celebrating major academic achievements."
     },
     {

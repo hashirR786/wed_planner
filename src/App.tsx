@@ -7,15 +7,13 @@ import { ScrollProgress } from './components/ui/ScrollProgress';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Services } from './pages/Services';
-import { Destinations } from './pages/Destinations';
 import { Portfolio } from './pages/Portfolio';
-import { Blog } from './pages/Blog';
 import { Contact } from './pages/Contact';
 import { Events } from './pages/Events';
 
 export function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
-    return window.location.pathname || '/';
+    return (window.location.pathname + window.location.search) || '/';
   });
 
   const handleNavigate = (path: string) => {
@@ -26,27 +24,23 @@ export function App() {
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(window.location.pathname || '/');
+      setCurrentPath((window.location.pathname + window.location.search) || '/');
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   const renderPage = () => {
-    switch (currentPath) {
+    const basePath = currentPath.split('?')[0];
+    switch (basePath) {
       case '/about':
         return <About onNavigate={handleNavigate} />;
       case '/weddings':
       case '/services':
         return <Services onNavigate={handleNavigate} />;
-      case '/destinations':
-        return <Destinations onNavigate={handleNavigate} />;
       case '/portfolio':
       case '/our-work':
         return <Portfolio />;
-      case '/blog':
-      case '/journal':
-        return <Blog onNavigate={handleNavigate} />;
       case '/events':
         return <Events onNavigate={handleNavigate} />;
       case '/contact':
@@ -61,7 +55,7 @@ export function App() {
     <div className="min-h-screen flex flex-col bg-[#FDFBF7] font-sans antialiased text-[#2C2A29]">
       <CustomCursor />
       <ScrollProgress />
-      <Header currentPath={currentPath} onNavigate={handleNavigate} />
+      <Header currentPath={currentPath.split('?')[0]} onNavigate={handleNavigate} />
       <div className="flex-grow">
         <PageTransition currentPath={currentPath}>
           {renderPage()}

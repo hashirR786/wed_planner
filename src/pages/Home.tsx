@@ -2,11 +2,9 @@ import React from 'react';
 import { SEO } from '../components/ui/SEO';
 import { HeroVideo } from '../components/home/HeroVideo';
 import { IntroWeddings } from '../components/home/IntroWeddings';
-import { DestinationsBlock } from '../components/home/DestinationsBlock';
 import { MeetPlanner } from '../components/home/MeetPlanner';
 import { PortfolioTeaser } from '../components/home/PortfolioTeaser';
 import { Testimonials } from '../components/home/Testimonials';
-import { BlogPreview } from '../components/home/BlogPreview';
 import { ContactBanner } from '../components/home/ContactBanner';
 
 interface HomeProps {
@@ -17,8 +15,8 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   return (
     <>
       <SEO
-        title="Weddings, Planned Beautifully"
-        description="Bespoke luxury wedding planning & editorial design studio. Crafting timeless celebrations in [LOCATION] and global destinations."
+        title="Cinematic Wedding & Couple Photography London — United Stories by Arun"
+        description="Authentic, emotional wedding, couple, maternity, and graduation photography studio based in London, UK."
       />
 
       <main className="w-full">
@@ -27,37 +25,27 @@ export const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <HeroVideo onNavigate={onNavigate} />
         </div>
 
-        {/* 2. Weddings Intro */}
-        <div id="weddings">
+        {/* 2. Photography Intro & Archways Showcase */}
+        <div id="intro">
           <IntroWeddings onNavigate={onNavigate} />
         </div>
 
-        {/* 3. Destinations Block */}
-        <div id="destinations">
-          <DestinationsBlock onNavigate={onNavigate} />
-        </div>
-
-        {/* 4. Meet Planner */}
+        {/* 3. Meet Photographer */}
         <div id="about">
           <MeetPlanner onNavigate={onNavigate} />
         </div>
 
-        {/* 5. Portfolio Teaser */}
+        {/* 4. Portfolio Teaser */}
         <div id="portfolio">
           <PortfolioTeaser onNavigate={onNavigate} />
         </div>
 
-        {/* 6. Testimonials Carousel */}
+        {/* 5. Testimonials Carousel */}
         <div id="testimonials">
           <Testimonials />
         </div>
 
-        {/* 7. Blog Preview */}
-        <div id="blog">
-          <BlogPreview onNavigate={onNavigate} />
-        </div>
-
-        {/* 8. Contact CTA Banner */}
+        {/* 6. Contact CTA Banner */}
         <div id="contact">
           <ContactBanner onNavigate={onNavigate} />
         </div>

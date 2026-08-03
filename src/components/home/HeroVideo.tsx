@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowDown, Calendar } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
 
 interface HeroVideoProps {
@@ -7,72 +6,48 @@ interface HeroVideoProps {
 }
 
 export const HeroVideo: React.FC<HeroVideoProps> = ({ onNavigate }) => {
-  // If client provides an MP4 video file, specify it in siteConfig.heroVideoSrc
-  const videoSrc = siteConfig.heroVideoSrc;
-  const gifSrc = siteConfig.heroGifs[0]?.src || '/weddinggif.gif';
+  const videoSrc = siteConfig.heroVideoSrc || '/Video-87580.mp4';
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-[#1A1918]">
-      {videoSrc ? (
-        /* Preferred High-Definition MP4/WebM Client Video Background */
+    <section className="relative w-full h-screen overflow-hidden bg-[#1A1918]" aria-label="Hero — United Stories by Arun">
+
+      {/* Full-screen rotated portrait video */}
+      <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
-          poster="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=80"
-          className="absolute inset-0 w-full h-full object-cover"
+          aria-hidden="true"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-[100vh] min-h-[100vw] w-auto h-auto object-cover max-w-none max-h-none -rotate-90 scale-125"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
-      ) : (
-        /* Fallback High Quality GIF Visual */
-        <img
-          src={gifSrc}
-          alt="United Stories by Arun — Cinematic Wedding Photography"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      )}
-
-      {/* Gentle Gradient Overlays for High Legibility at Top & Bottom */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/70 pointer-events-none z-10" />
-
-      {/* Subtle Bottom Hero Overlay Bar */}
-      <div className="absolute bottom-12 inset-x-0 z-20 flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 space-y-4">
-        
-        {/* Subtle Tagline Subtitle */}
-        <div className="max-w-2xl mx-auto space-y-2 animate-fade-in">
-          <p className="font-script text-2xl sm:text-3xl text-[#E09F87] drop-shadow-md">
-            {siteConfig.businessTagline}
-          </p>
-          <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-white/90 font-light drop-shadow">
-            {siteConfig.location} — Cinematic Wedding & Fine Art Photography Studio
-          </p>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="pt-2 flex items-center justify-center gap-4">
-          <button
-            onClick={() => onNavigate('/weddings')}
-            className="btn-primary py-3.5 px-7 text-xs tracking-[0.2em] shadow-xl"
-          >
-            Explore Weddings
-          </button>
-          <button
-            onClick={() => onNavigate('/contact')}
-            className="btn-terracotta py-3.5 px-7 text-xs tracking-[0.2em] shadow-xl"
-          >
-            <Calendar size={15} /> Book a Consultation
-          </button>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="pt-4 flex flex-col items-center text-white/70 text-[10px] tracking-[0.25em] uppercase">
-          <ArrowDown size={14} className="animate-bounce mb-1" />
-          Scroll Down
-        </div>
-
       </div>
+
+      {/* Very subtle top vignette so logo reads clearly */}
+      <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black/50 to-transparent pointer-events-none z-10" />
+
+      {/* Brand Logo — centred at top */}
+      <div className="absolute top-8 inset-x-0 z-20 flex justify-center items-center animate-fade-in">
+        <button
+          onClick={() => onNavigate('/')}
+          aria-label="United Stories by Arun — Home"
+          className="focus:outline-none hover:scale-105 transition-transform duration-300"
+        >
+          <img
+            src="/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png"
+            alt="United Stories by Arun — Cinematic Photography Studio, London"
+            style={{
+              height: '130px',
+              width: 'auto',
+              objectFit: 'contain',
+              filter: 'brightness(0) invert(1) drop-shadow(0 4px 24px rgba(0,0,0,0.6))',
+            }}
+          />
+        </button>
+      </div>
+
     </section>
   );
 };
