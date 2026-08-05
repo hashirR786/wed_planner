@@ -10,6 +10,8 @@ import { Services } from './pages/Services';
 import { Portfolio } from './pages/Portfolio';
 import { Contact } from './pages/Contact';
 import { Events } from './pages/Events';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { TermsOfService } from './pages/TermsOfService';
 
 export function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
@@ -45,6 +47,12 @@ export function App() {
         return <Events onNavigate={handleNavigate} />;
       case '/contact':
         return <Contact />;
+      case '/privacy':
+      case '/privacy-policy':
+        return <PrivacyPolicy onNavigate={handleNavigate} />;
+      case '/terms':
+      case '/terms-of-service':
+        return <TermsOfService onNavigate={handleNavigate} />;
       case '/':
       default:
         return <Home onNavigate={handleNavigate} />;
