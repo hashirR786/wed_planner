@@ -67,8 +67,7 @@ export const siteConfig = {
   turnaroundGuarantee: "Edited images delivered within 5 working days.",
   experienceYears: "12+ Years",
   instagram: "https://www.instagram.com/united_stories_by__arun/",
-  facebook: "facebook.com/unitedstoriesbyarun",
-  pinterest: "pinterest.com/unitedstoriesbyarun",
+  whatsapp: "https://wa.me/c/26882435186779",
 
   // Using Video-87580.mp4 exclusively for the hero background
   heroVideoSrc: "/Video-87580.mp4",
