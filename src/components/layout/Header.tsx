@@ -33,6 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
       items: [
         { label: 'Motherhood in London Maternity (£200)', sub: '1-Hour session at Central London landmarks', path: '/weddings' },
         { label: 'Love in London Couple Shoot (£200)', sub: '2-Hour session across 2 Central London locations', path: '/portfolio?category=Couples' },
+        { label: 'Graduation & Academic Honors', sub: 'Timeless portraiture honoring academic distinction', path: '/portfolio?category=Graduation' },
         { label: 'Preschool Portrait Session (£150)', sub: 'Magical 1-hour outdoor shoot for ages 2–5', path: '/weddings' },
       ],
     },
@@ -41,8 +42,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
       items: [
         { label: 'Love in London (Couple Sessions)', sub: 'Central London romantic portraiture', path: '/portfolio?category=Couples' },
         { label: 'Motherhood in London (Maternity)', sub: 'Westminster, Big Ben & Tower Bridge shoots', path: '/portfolio?category=Maternity' },
-        { label: 'Graduation Milestone Stories', sub: 'Academic distinction & achievement portraiture', path: '/portfolio?category=Graduation' },
-        { label: 'Preschool Portrait Sessions', sub: 'Early childhood joy & milestone personality', path: '/portfolio?category=Preschool' },
+        { label: 'Graduation & Academic Honors', sub: 'Academic distinction & milestone portraiture', path: '/portfolio?category=Graduation' },
+        { label: 'Preschool Portrait Sessions (Age 2–5)', sub: 'Early childhood joy & milestone personality', path: '/portfolio?category=Preschool' },
       ],
     },
   };
@@ -126,10 +127,10 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
                       )}
                     </button>
 
-                    {/* Popover Dropdown Popup on Hover */}
+                    {/* Popover Dropdown Popup on Hover (Scrollable) */}
                     {hasPopup && activeDropdown === link.path && (
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-72 z-50 animate-nav-popup">
-                        <div className="bg-[#FDFBF7] text-[#2C2A29] rounded-2xl p-5 shadow-2xl border border-[#2C4A3E]/15 backdrop-blur-xl">
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-80 z-50 animate-nav-popup">
+                        <div className="bg-[#FDFBF7] text-[#2C2A29] rounded-2xl p-5 shadow-2xl border border-[#2C4A3E]/15 backdrop-blur-xl max-h-[75vh] overflow-y-auto">
                           <div className="flex items-center justify-between pb-3 mb-3 border-b border-[#2C4A3E]/10">
                             <span className="text-[10px] uppercase tracking-widest font-semibold text-[#C87D65]">
                               {popups[link.path].title}
