@@ -67,6 +67,7 @@ export const siteConfig = {
   turnaroundGuarantee: "Edited images delivered within 5 working days.",
   experienceYears: "12+ Years",
   instagram: "https://www.instagram.com/united_stories_by__arun/",
+  facebook: "https://www.facebook.com/profile.php?id=61578635413853",
   whatsapp: "https://wa.me/447769500815",
   whatsappCatalogue: "https://wa.me/c/26882435186779",
 

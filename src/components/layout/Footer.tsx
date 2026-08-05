@@ -58,6 +58,17 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 </svg>
               </a>
               <a
+                href={siteConfig.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-white hover:border-[#1877F2] hover:bg-[#1877F2]/10 transition-colors"
+                aria-label="Facebook Page"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/>
+                </svg>
+              </a>
+              <a
                 href={siteConfig.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -86,9 +97,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <li className="flex items-center gap-2">
                 <span className="text-[#C87D65] shrink-0">Phone:</span>
                 <a href={`tel:${siteConfig.phone}`} className="hover:text-white transition-colors">{siteConfig.phone}</a>
-              </li>
-              <li className="text-xs text-[#C87D65] pt-1 font-medium">
-                ⚡ {siteConfig.turnaroundGuarantee}
               </li>
               <li className="pt-2">
                 <button
