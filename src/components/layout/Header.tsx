@@ -28,15 +28,6 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
 
   // Mega-menu popups data
   const popups: Record<string, { title: string; items: { label: string; sub: string; path: string }[] }> = {
-    '/weddings': {
-      title: 'Our Photography Collections',
-      items: [
-        { label: 'Motherhood in London Maternity (£200)', sub: '1-Hour session at Central London landmarks', path: '/weddings' },
-        { label: 'Love in London Couple Shoot (£200)', sub: '2-Hour session across 2 Central London locations', path: '/portfolio?category=Couples' },
-        { label: 'Graduation & Academic Honors', sub: 'Timeless portraiture honoring academic distinction', path: '/portfolio?category=Graduation' },
-        { label: 'Preschool Portrait Session (£150)', sub: 'Magical 1-hour outdoor shoot for ages 2–5', path: '/weddings' },
-      ],
-    },
     '/portfolio': {
       title: 'Featured Galleries',
       items: [
@@ -51,7 +42,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Weddings', path: '/weddings', hasPopup: true },
+    { name: 'Weddings', path: '/weddings' },
     { name: 'Our Work', path: '/portfolio', hasPopup: true },
     { name: 'Events', path: '/events' },
   ];

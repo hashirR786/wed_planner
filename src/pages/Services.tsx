@@ -14,19 +14,19 @@ export const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
   const faqs = [
     {
       q: "How far in advance should we book our photography session?",
-      a: "We recommend booking wedding photography 8 to 14 months prior to your date. For London couple sessions, fine-art maternity, and graduation milestone shoots, we recommend booking 4 to 8 weeks in advance."
+      a: "We recommend booking your London couple session, maternity shoot, or preschool portrait 2 to 4 weeks in advance. For weddings and special celebrations, we recommend booking 3 to 6 months in advance to secure your preferred date."
     },
     {
-      q: "How many sessions or weddings does your studio accept each year?",
-      a: "To ensure every story receives our undivided creative focus, prompt communication, and handcrafted post-processing, we cap our annual intake to 15 weddings and select portrait sessions per year."
+      q: "What is included in your maternity, couple, and preschool session packages?",
+      a: "Our Motherhood in London Maternity shoot (£200.00) includes a 1-hour photoshoot at Central London landmarks (Westminster, Big Ben, Tower Bridge, London Eye & more), 20 edited images + ALL raw files included. Our Love in London Couple shoot (£200.00) includes 2 hours across 2 locations with full posing help. Our Preschool shoot (£150.00) includes a 1-hour outdoor shoot with 15 edited images and styling tips."
     },
     {
-      q: "Do you travel for destination weddings and couple shoots?",
-      a: "Yes! Based in London, we regularly photograph weddings, elopements, and couple portrait sessions across Lake Como, Paris, Provence, Amalfi Coast, and worldwide locations."
+      q: "Do you travel for sessions outside Central London?",
+      a: "Yes! While our popular sessions highlight iconic Central London landmarks (Westminster, Big Ben, Tower Bridge, London Eye), we regularly photograph couple, maternity, and milestone sessions across the UK and international locations."
     },
     {
       q: "How and when will we receive our final photography gallery?",
-      a: "Sneak peek highlights are delivered within 48 to 72 hours. Your complete, fully edited high-resolution private online gallery is delivered within 4 to 6 weeks, complete with full personal printing rights."
+      a: "All high-resolution edited images are delivered in your private online gallery within 5 working days! For maternity shoots, all raw images are also included with your delivery."
     }
   ];
 
