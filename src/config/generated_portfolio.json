@@ -680,5 +680,104 @@
     "description": "A triumphant, timeless portrait session capturing academic distinction and personal pride.",
     "photographer": "United Stories by Arun",
     "featured": false
+  },
+  {
+    "id": "p63",
+    "title": "Graduation Milestone Session #11",
+    "category": "Graduation",
+    "location": "London & Historic Universities",
+    "image": "/portfolio/graduation/grad_new_01.webp",
+    "guestCount": "Graduation Portraiture",
+    "description": "A triumphant, timeless portrait session capturing academic distinction and personal pride.",
+    "photographer": "United Stories by Arun",
+    "featured": true
+  },
+  {
+    "id": "p64",
+    "title": "Graduation Milestone Session #12",
+    "category": "Graduation",
+    "location": "London & Historic Universities",
+    "image": "/portfolio/graduation/grad_new_02.webp",
+    "guestCount": "Graduation Portraiture",
+    "description": "A triumphant, timeless portrait session capturing academic distinction and personal pride.",
+    "photographer": "United Stories by Arun",
+    "featured": false
+  },
+  {
+    "id": "p65",
+    "title": "Graduation Milestone Session #13",
+    "category": "Graduation",
+    "location": "London & Historic Universities",
+    "image": "/portfolio/graduation/grad_new_03.webp",
+    "guestCount": "Graduation Portraiture",
+    "description": "A triumphant, timeless portrait session capturing academic distinction and personal pride.",
+    "photographer": "United Stories by Arun",
+    "featured": false
+  },
+  {
+    "id": "p66",
+    "title": "Graduation Milestone Session #14",
+    "category": "Graduation",
+    "location": "London & Historic Universities",
+    "image": "/portfolio/graduation/grad_new_04.webp",
+    "guestCount": "Graduation Portraiture",
+    "description": "A triumphant, timeless portrait session capturing academic distinction and personal pride.",
+    "photographer": "United Stories by Arun",
+    "featured": false
+  },
+  {
+    "id": "p67",
+    "title": "Preschool Portrait Session #1",
+    "category": "Preschool",
+    "location": "London Parks & Outdoors",
+    "image": "/portfolio/preschool/preschool_01.webp",
+    "guestCount": "Age 2\u20135 Childhood Session",
+    "description": "Magical 1-hour outdoor shoot capturing early childhood joy, expressions, and unique personality.",
+    "photographer": "United Stories by Arun",
+    "featured": true
+  },
+  {
+    "id": "p68",
+    "title": "Preschool Portrait Session #2",
+    "category": "Preschool",
+    "location": "London Parks & Outdoors",
+    "image": "/portfolio/preschool/preschool_02.webp",
+    "guestCount": "Age 2\u20135 Childhood Session",
+    "description": "Magical 1-hour outdoor shoot capturing early childhood joy, expressions, and unique personality.",
+    "photographer": "United Stories by Arun",
+    "featured": false
+  },
+  {
+    "id": "p69",
+    "title": "Preschool Portrait Session #3",
+    "category": "Preschool",
+    "location": "London Parks & Outdoors",
+    "image": "/portfolio/preschool/preschool_03.webp",
+    "guestCount": "Age 2\u20135 Childhood Session",
+    "description": "Magical 1-hour outdoor shoot capturing early childhood joy, expressions, and unique personality.",
+    "photographer": "United Stories by Arun",
+    "featured": false
+  },
+  {
+    "id": "p70",
+    "title": "Preschool Portrait Session #4",
+    "category": "Preschool",
+    "location": "London Parks & Outdoors",
+    "image": "/portfolio/preschool/preschool_04.webp",
+    "guestCount": "Age 2\u20135 Childhood Session",
+    "description": "Magical 1-hour outdoor shoot capturing early childhood joy, expressions, and unique personality.",
+    "photographer": "United Stories by Arun",
+    "featured": false
+  },
+  {
+    "id": "p71",
+    "title": "Preschool Portrait Session #5",
+    "category": "Preschool",
+    "location": "London Parks & Outdoors",
+    "image": "/portfolio/preschool/preschool_05.webp",
+    "guestCount": "Age 2\u20135 Childhood Session",
+    "description": "Magical 1-hour outdoor shoot capturing early childhood joy, expressions, and unique personality.",
+    "photographer": "United Stories by Arun",
+    "featured": false
   }
 ]

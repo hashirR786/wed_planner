@@ -14,7 +14,7 @@ export interface Testimonial {
 export interface PortfolioItem {
   id: string;
   title: string;
-  category: 'Weddings' | 'Couples' | 'Maternity' | 'Graduation' | 'Fine Art';
+  category: 'Weddings' | 'Couples' | 'Maternity' | 'Graduation' | 'Preschool' | 'Fine Art';
   location: string;
   image: string;
   guestCount: string;
@@ -271,8 +271,14 @@ export const siteConfig = {
     },
     {
       id: "e3",
-      title: "Preschool Portrait Session (Age 2–5)",
+      title: "Graduation & Academic Honors",
       image: "/portfolio/graduation/07.webp",
+      description: "Timeless, dignified graduation portraits for students and families celebrating major academic achievements."
+    },
+    {
+      id: "e4",
+      title: "Preschool Portrait Session (Age 2–5)",
+      image: "/portfolio/preschool/preschool_01.webp",
       description: "Magical 1-hour outdoor shoot capturing your little one's expressions and early childhood joy (£150.00)."
     }
   ]

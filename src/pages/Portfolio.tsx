@@ -24,13 +24,18 @@ const categoryDescriptions: Record<string, { title: string; subtitle: string; de
     title: "Graduation & Academic Distinction",
     subtitle: "Honoring Accomplishment & Legacy",
     description: "Triumphant and elegant graduation portraits capturing academic achievement, personal distinction, and milestone pride with fine art polish."
+  },
+  Preschool: {
+    title: "Preschool & Early Childhood (Age 2–5)",
+    subtitle: "Capturing Childhood Joy & Expression",
+    description: "Magical 1-hour outdoor portrait sessions capturing your little one's unique expressions, early childhood joy, and personality in a natural, artistic style."
   }
 };
 
 export const Portfolio: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
 
-  const categories = ['All', 'Couples', 'Maternity', 'Graduation'];
+  const categories = ['All', 'Couples', 'Maternity', 'Graduation', 'Preschool'];
 
   // Sync active category with URL parameter ?category=...
   useEffect(() => {

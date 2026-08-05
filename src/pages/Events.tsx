@@ -18,14 +18,14 @@ export const Events: React.FC<EventsProps> = ({ onNavigate }) => {
 
       <main className="bg-[#FDFBF7]">
         <PageHeader
-          title="Secondary Events & Galas"
-          subtitle="Extending editorial artistry to anniversary galas, welcome parties, farewell brunches, and private estate gatherings."
+          title="Milestones & Special Celebrations"
+          subtitle="Fine-art photography for maternity stories, London couple sessions, graduation academic honors, and preschool milestone sessions."
           badge="Special Celebrations"
           backgroundImage="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=2000&q=80"
         />
 
         <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {siteConfig.secondaryEvents.map((evt) => (
               <div
                 key={evt.id}
