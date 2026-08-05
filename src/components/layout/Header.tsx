@@ -41,7 +41,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
       items: [
         { label: 'Love in London (Couple Sessions)', sub: 'Central London romantic portraiture', path: '/portfolio?category=Couples' },
         { label: 'Motherhood in London (Maternity)', sub: 'Westminster, Big Ben & Tower Bridge shoots', path: '/portfolio?category=Maternity' },
-        { label: 'Preschool & Milestone Portraits', sub: 'Early childhood joy & personality', path: '/portfolio?category=Graduation' },
+        { label: 'Graduation Milestone Stories', sub: 'Academic distinction & achievement portraiture', path: '/portfolio?category=Graduation' },
+        { label: 'Preschool Portrait Sessions', sub: 'Early childhood joy & milestone personality', path: '/portfolio?category=Preschool' },
       ],
     },
   };
