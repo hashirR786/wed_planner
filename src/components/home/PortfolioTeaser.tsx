@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowRight, Camera } from 'lucide-react';
 import { ScrollReveal } from '../ui/ScrollReveal';
 
+import { getAssetUrl } from '../../utils/asset';
+
 interface PortfolioTeaserProps {
   onNavigate: (path: string) => void;
 }
@@ -54,7 +56,7 @@ export const PortfolioTeaser: React.FC<PortfolioTeaserProps> = ({ onNavigate }) 
                 {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden bg-black/5">
                   <img
-                    src={story.image}
+                    src={getAssetUrl(story.image)}
                     alt={`Couple Story #${story.id} — United Stories by Arun, London`}
                     loading="lazy"
                     decoding="async"

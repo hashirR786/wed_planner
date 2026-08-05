@@ -4,6 +4,8 @@ import { PageHeader } from '../components/shared/PageHeader';
 import { siteConfig } from '../config/siteConfig';
 import { ArrowRight } from 'lucide-react';
 
+import { getAssetUrl } from '../utils/asset';
+
 interface EventsProps {
   onNavigate: (path: string) => void;
 }
@@ -34,7 +36,7 @@ export const Events: React.FC<EventsProps> = ({ onNavigate }) => {
                 <div>
                   <div className="relative aspect-[4/3] overflow-hidden img-zoom-container">
                     <img
-                      src={evt.image}
+                      src={getAssetUrl(evt.image)}
                       alt={evt.title}
                       className="w-full h-full object-cover"
                     />

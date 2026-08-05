@@ -21,14 +21,8 @@ export const getNormalizedPath = (rawPath: string) => {
   return clean;
 };
 
-export const getAssetUrl = (path: string) => {
-  if (!path) return '';
-  if (path.startsWith('http://') || path.startsWith('https://')) return path;
-  const base = import.meta.env.BASE_URL || '/';
-  const cleanBase = base.endsWith('/') ? base : base + '/';
-  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
-  return cleanBase + cleanPath;
-};
+import { getAssetUrl } from './utils/asset';
+export { getAssetUrl };
 
 export function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {

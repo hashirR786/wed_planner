@@ -3,6 +3,7 @@ import { SEO } from '../components/ui/SEO';
 import { PageHeader } from '../components/shared/PageHeader';
 import { siteConfig } from '../config/siteConfig';
 import { Filter } from 'lucide-react';
+import { getAssetUrl } from '../utils/asset';
 
 const categoryDescriptions: Record<string, { title: string; subtitle: string; description: string }> = {
   All: {
@@ -125,7 +126,7 @@ export const Portfolio: React.FC = () => {
                 className="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 bg-[#1A1918]"
               >
                 <img
-                  src={item.image}
+                  src={getAssetUrl(item.image)}
                   alt={item.title}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"

@@ -3,6 +3,8 @@ import { ArrowRight, Quote } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
 import { ScrollReveal } from '../ui/ScrollReveal';
 
+import { getAssetUrl } from '../../utils/asset';
+
 interface IntroWeddingsProps {
   onNavigate: (path: string) => void;
 }
@@ -123,7 +125,7 @@ export const IntroWeddings: React.FC<IntroWeddingsProps> = ({ onNavigate }) => {
                   {coupleImages.map((src, idx) => (
                     <img
                       key={src}
-                      src={src}
+                      src={getAssetUrl(src)}
                       alt="Couples Photography"
                       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                         idx === coupleIndex ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
@@ -159,7 +161,7 @@ export const IntroWeddings: React.FC<IntroWeddingsProps> = ({ onNavigate }) => {
                   {maternityImages.map((src, idx) => (
                     <img
                       key={src}
-                      src={src}
+                      src={getAssetUrl(src)}
                       alt="Maternity Photography"
                       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                         idx === maternityIndex ? 'opacity-100 scale-105' : 'opacity-0 scale-100'
@@ -195,7 +197,7 @@ export const IntroWeddings: React.FC<IntroWeddingsProps> = ({ onNavigate }) => {
                   {graduationImages.map((src, idx) => (
                     <img
                       key={src}
-                      src={src}
+                      src={getAssetUrl(src)}
                       alt="Graduation Photography"
                       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                         idx === graduationIndex ? 'opacity-100 scale-105' : 'opacity-0 scale-100'

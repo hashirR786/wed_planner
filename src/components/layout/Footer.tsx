@@ -2,6 +2,8 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
 
+import { getAssetUrl } from '../../utils/asset';
+
 interface FooterProps {
   onNavigate: (path: string) => void;
 }
@@ -26,7 +28,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-2">
               <img
-                src="/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png"
+                src={getAssetUrl("/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png")}
                 alt="United Stories by Arun"
                 style={{
                   height: '115px',
@@ -134,7 +136,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   className="relative aspect-square overflow-hidden rounded-lg group"
                 >
                   <img
-                    src={src}
+                    src={getAssetUrl(src)}
                     alt={`United Stories by Arun — portfolio`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 brightness-90 group-hover:brightness-100"
                   />

@@ -4,6 +4,8 @@ import { PageHeader } from '../components/shared/PageHeader';
 import { siteConfig } from '../config/siteConfig';
 import { Heart, Compass, ArrowRight } from 'lucide-react';
 
+import { getAssetUrl } from '../utils/asset';
+
 interface AboutProps {
   onNavigate: (path: string) => void;
 }
@@ -60,7 +62,7 @@ export const About: React.FC<AboutProps> = ({ onNavigate }) => {
             <div className="lg:col-span-6">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl img-zoom-container aspect-[4/5] border border-[#2C4A3E]/10">
                 <img
-                  src={siteConfig.bio.photo}
+                  src={getAssetUrl(siteConfig.bio.photo)}
                   alt={`Portrait of ${siteConfig.plannerName}`}
                   className="w-full h-full object-cover brightness-105 contrast-105"
                 />
