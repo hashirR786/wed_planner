@@ -76,11 +76,10 @@ export const siteConfig = {
 
   bio: {
     tagline: "Capturing timeless memories through storytelling photography for over 12 years.",
-    shortBio: "Capturing timeless memories through storytelling photography for over 12 years. Based in the UK, I blend passion, emotion, and culture to create meaningful visuals. Let’s tell your story—beautifully and authentically.",
+    shortBio: "Capturing timeless memories through storytelling photography for over 12 years. Based in the UK, I blend passion, emotion, and culture to create meaningful visuals — telling your story beautifully and authentically.",
     extendedBio: [
-      "Capturing timeless memories through storytelling photography for over 12 years. Based in the UK, I blend passion, emotion, and culture to create meaningful visuals. Let’s tell your story—beautifully and authentically.",
-      "Whether documenting a romantic central London couple shoot, a glowing maternity portrait, or a joyous preschool milestone, every session is approached with artistic dedication, patience, and fine-art color grading.",
-      "Guarantee: All high-resolution edited images are delivered in your private online gallery within 5 working days."
+      "With over 12 years of dedicated storytelling experience across London and the UK, my approach is rooted in quiet authenticity and fine art artistry. Whether exploring iconic Central London landmarks like Westminster, Big Ben, Tower Bridge, and the London Eye, or capturing peaceful outdoor settings, I focus on preserving genuine human connection.",
+      "From romantic couple sessions and glowing maternity portraits to playful preschool milestone sessions (ages 2–5), every shoot is guided with patience, relaxed posing help, and filmic color grading so your photos feel timeless, emotional, and deeply personal."
     ],
     photo: "/arun.webp"
   },
