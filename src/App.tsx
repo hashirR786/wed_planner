@@ -13,28 +13,49 @@ import { Events } from './pages/Events';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { TermsOfService } from './pages/TermsOfService';
 
+export const getNormalizedPath = (rawPath: string) => {
+  let clean = rawPath.split('?')[0];
+  // Strip sub-folder repo path if hosted on GitHub Pages (e.g. /wed_planner)
+  clean = clean.replace(/^\/wed_planner\/?/i, '/');
+  if (!clean.startsWith('/')) clean = '/' + clean;
+  return clean;
+};
+
+export const getAssetUrl = (path: string) => {
+  if (!path) return '';
+  if (path.startsWith('http://') || path.startsWith('https://')) return path;
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanBase = base.endsWith('/') ? base : base + '/';
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return cleanBase + cleanPath;
+};
+
 export function App() {
   const [currentPath, setCurrentPath] = useState<string>(() => {
-    return (window.location.pathname + window.location.search) || '/';
+    return getNormalizedPath(window.location.pathname) + window.location.search;
   });
 
   const handleNavigate = (path: string) => {
     setCurrentPath(path);
-    window.history.pushState({}, '', path);
+    const base = import.meta.env.BASE_URL || '/';
+    const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base;
+    const targetUrl = (cleanBase + path).replace(/\/+/g, '/');
+    window.history.pushState({}, '', targetUrl);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath((window.location.pathname + window.location.search) || '/');
+      setCurrentPath(getNormalizedPath(window.location.pathname) + window.location.search);
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  const normalizedBasePath = getNormalizedPath(currentPath);
+
   const renderPage = () => {
-    const basePath = currentPath.split('?')[0];
-    switch (basePath) {
+    switch (normalizedBasePath) {
       case '/about':
         return <About onNavigate={handleNavigate} />;
       case '/weddings':
@@ -63,7 +84,7 @@ export function App() {
     <div className="min-h-screen flex flex-col bg-[#FDFBF7] font-sans antialiased text-[#2C2A29]">
       <CustomCursor />
       <ScrollProgress />
-      <Header currentPath={currentPath.split('?')[0]} onNavigate={handleNavigate} />
+      <Header currentPath={normalizedBasePath} onNavigate={handleNavigate} />
       <div className="flex-grow">
         <PageTransition currentPath={currentPath}>
           {renderPage()}

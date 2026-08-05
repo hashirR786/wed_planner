@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { siteConfig } from '../../config/siteConfig';
+import { getAssetUrl } from '../../App';
 
 interface HeroVideoProps {
   onNavigate: (path: string) => void;
@@ -14,7 +15,8 @@ const mobileHeroImages = [
 ];
 
 export const HeroVideo: React.FC<HeroVideoProps> = ({ onNavigate }) => {
-  const videoSrc = siteConfig.heroVideoSrc || '/Video-87580.mp4';
+  const rawVideoSrc = siteConfig.heroVideoSrc || '/Video-87580.mp4';
+  const videoSrc = getAssetUrl(rawVideoSrc);
   const [isMobile, setIsMobile] = useState(false);
   const [imgIndex, setImgIndex] = useState(0);
 
@@ -62,7 +64,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ onNavigate }) => {
           {mobileHeroImages.map((src, idx) => (
             <img
               key={src}
-              src={src}
+              src={getAssetUrl(src)}
               alt="United Stories by Arun — Cinematic Photography"
               fetchPriority={idx === 0 ? 'high' : 'low'}
               decoding="async"

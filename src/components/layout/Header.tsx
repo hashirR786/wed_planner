@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, ChevronDown, ArrowRight } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
+import { getAssetUrl } from '../../App';
 
 interface HeaderProps {
   currentPath: string;
@@ -68,7 +69,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
               aria-label="United Stories by Arun"
             >
               <img
-                src="/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png"
+                src={getAssetUrl("/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png")}
                 alt="United Stories by Arun"
                 style={{
                   height: '110px',
