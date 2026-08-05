@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, ArrowDown } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
+import { getAssetUrl } from '../../utils/asset';
 
 interface HeroCarouselProps {
   onNavigate: (path: string) => void;
@@ -39,7 +40,7 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({ onNavigate }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/50 z-10" />
           
           <img
-            src={slide.image}
+            src={getAssetUrl(slide.image)}
             alt={slide.tagline}
             className="w-full h-full object-cover scale-105 transition-transform duration-[8000ms] ease-out"
           />

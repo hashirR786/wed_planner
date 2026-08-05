@@ -104,7 +104,7 @@ export const HeroVideo: React.FC<HeroVideoProps> = ({ onNavigate }) => {
           className="focus:outline-none hover:scale-105 transition-transform duration-300"
         >
           <img
-            src="/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png"
+            src={getAssetUrl("/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png")}
             alt="United Stories by Arun — Cinematic Photography Studio, London"
             style={{
               height: 'clamp(90px, 18vw, 130px)',

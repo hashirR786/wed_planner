@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, MapPin, Users, Camera } from 'lucide-react';
 import type { PortfolioItem } from '../../config/siteConfig';
+import { getAssetUrl } from '../../utils/asset';
 
 interface ImageModalProps {
   item: PortfolioItem | null;
@@ -28,7 +29,7 @@ export const ImageModal: React.FC<ImageModalProps> = ({ item, onClose }) => {
         {/* Image */}
         <div className="lg:col-span-7 bg-black flex items-center justify-center overflow-hidden min-h-[300px] lg:min-h-[500px]">
           <img
-            src={item.image}
+            src={getAssetUrl(item.image)}
             alt={item.title}
             className="w-full h-full object-cover max-h-[70vh] lg:max-h-[85vh]"
           />

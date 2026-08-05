@@ -196,7 +196,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
           <div className="flex items-center justify-between px-6 py-5 border-b border-[#2C4A3E]/10">
             <div>
               <img
-                src="/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png"
+                src={getAssetUrl("/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png")}
                 alt="United Stories by Arun"
                 style={{
                   height: '80px',

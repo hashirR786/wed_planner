@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight, Heart } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
 import { ScrollReveal } from '../ui/ScrollReveal';
+import { getAssetUrl } from '../../utils/asset';
 
 interface MeetPlannerProps {
   onNavigate: (path: string) => void;
@@ -59,7 +60,7 @@ export const MeetPlanner: React.FC<MeetPlannerProps> = ({ onNavigate }) => {
 
                 <div className="rounded-2xl overflow-hidden shadow-xl img-zoom-container aspect-[3/4]">
                   <img
-                    src={siteConfig.bio.photo}
+                    src={getAssetUrl(siteConfig.bio.photo)}
                     alt={`Portrait of ${siteConfig.plannerName}`}
                     className="w-full h-full object-cover brightness-105 contrast-105"
                   />

@@ -2,6 +2,7 @@ import React from 'react';
 import { BookOpen, ArrowUpRight, Clock } from 'lucide-react';
 import { siteConfig } from '../../config/siteConfig';
 import { ScrollReveal } from '../ui/ScrollReveal';
+import { getAssetUrl } from '../../utils/asset';
 
 interface BlogPreviewProps {
   onNavigate: (path: string) => void;
@@ -48,7 +49,7 @@ export const BlogPreview: React.FC<BlogPreviewProps> = ({ onNavigate }) => {
                   {/* Cover Image */}
                   <div className="relative aspect-[16/10] overflow-hidden bg-black/5">
                     <img
-                      src={post.coverImage}
+                      src={getAssetUrl(post.coverImage)}
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
