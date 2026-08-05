@@ -35,7 +35,7 @@ export const MeetPlanner: React.FC<MeetPlannerProps> = ({ onNavigate }) => {
               </p>
 
               <p className="text-sm text-[#65605C] font-light leading-relaxed mt-4">
-                I view every session as a cinematic story. My goal is to capture raw human connection, genuine emotion, and natural light so you receive images that feel timeless, authentic, and deeply personal.
+                With over 12 years of storytelling photography experience across the UK, I blend passion, emotion, and culture to create meaningful visuals. All high-resolution edited image galleries are delivered within 5 working days.
               </p>
 
               <div className="pt-6">

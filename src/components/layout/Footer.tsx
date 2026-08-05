@@ -98,6 +98,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                 <span className="text-[#C87D65] shrink-0">Phone:</span>
                 <a href={`tel:${siteConfig.phone}`} className="hover:text-white transition-colors">{siteConfig.phone}</a>
               </li>
+              <li className="text-xs text-[#C87D65] pt-1 font-medium">
+                ⚡ {siteConfig.turnaroundGuarantee}
+              </li>
               <li className="pt-2">
                 <button
                   onClick={() => onNavigate('/contact')}

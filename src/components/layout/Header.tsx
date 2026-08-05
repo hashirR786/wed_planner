@@ -31,16 +31,17 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
     '/weddings': {
       title: 'Our Photography Collections',
       items: [
-        { label: 'Cinematic Wedding Stories', sub: 'Full day fine art coverage & bespoke album', path: '/weddings' },
-        { label: 'Couple & Engagement Sessions', sub: 'Intimate portraiture across London', path: '/portfolio?category=Couples' },
+        { label: 'Motherhood in London Maternity (£200)', sub: '1-Hour session at Central London landmarks', path: '/weddings' },
+        { label: 'Love in London Couple Shoot (£200)', sub: '2-Hour session across 2 Central London locations', path: '/portfolio?category=Couples' },
+        { label: 'Preschool Portrait Session (£150)', sub: 'Magical 1-hour outdoor shoot for ages 2–5', path: '/weddings' },
       ],
     },
     '/portfolio': {
       title: 'Featured Galleries',
       items: [
-        { label: 'Couple Sessions (Pre-Wedding)', sub: 'London golden hour & romantic portraiture', path: '/portfolio?category=Couples' },
-        { label: 'Fine Art Maternity', sub: 'Authentic life milestone sessions', path: '/portfolio?category=Maternity' },
-        { label: 'Graduation Milestone', sub: 'Academic distinction portraiture', path: '/portfolio?category=Graduation' },
+        { label: 'Love in London (Couple Sessions)', sub: 'Central London romantic portraiture', path: '/portfolio?category=Couples' },
+        { label: 'Motherhood in London (Maternity)', sub: 'Westminster, Big Ben & Tower Bridge shoots', path: '/portfolio?category=Maternity' },
+        { label: 'Preschool & Milestone Portraits', sub: 'Early childhood joy & personality', path: '/portfolio?category=Graduation' },
       ],
     },
   };

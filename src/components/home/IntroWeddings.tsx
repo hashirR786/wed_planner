@@ -80,17 +80,17 @@ export const IntroWeddings: React.FC<IntroWeddingsProps> = ({ onNavigate }) => {
             {/* Right Column: Short Paragraph + Warm Quote */}
             <div className="lg:col-span-7 space-y-6">
               <p className="text-base sm:text-lg text-[#65605C] font-light leading-relaxed">
-                Based in {siteConfig.location}, United Stories by Arun specializes in cinematic, emotional, and fine art wedding and couple photography. From grand London celebrations to intimate milestone sessions like maternity and graduation, we document honest human connection with artistic heart.
+                {siteConfig.bio.shortBio}
               </p>
 
               {/* Fine Art Poetic Quote Box */}
               <div className="bg-[#F7F3EC] p-6 sm:p-8 rounded-2xl border-l-4 border-[#C87D65] space-y-3 relative shadow-sm">
                 <Quote size={24} className="text-[#C87D65]/30 absolute top-4 right-4" />
                 <p className="font-serif text-lg sm:text-xl text-[#2C2A29] italic leading-relaxed">
-                  "Photographs are the quiet keepsakes of our most honest emotions — moments frozen in light so they can be felt again and again."
+                  "Capturing timeless memories through storytelling photography for over 12 years... Let’s tell your story — beautifully and authentically."
                 </p>
                 <span className="text-xs uppercase tracking-widest text-[#2C2A29] font-medium block">
-                  — Arun, Founder & Lead Photographer
+                  — Arun, Founder & Lead Photographer (12+ Years Experience)
                 </span>
               </div>
             </div>

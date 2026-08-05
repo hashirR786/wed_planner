@@ -58,12 +58,14 @@ export interface Destination {
 export const siteConfig = {
   businessName: "United Stories by Arun",
   businessTagline: "Authentic, Emotional & Fine Art Imagery",
-  businessSubtext: "Cinematic wedding, couple, and milestone portraiture based in London and available worldwide.",
+  businessSubtext: "Capturing timeless memories through storytelling photography for over 12 years in London & the UK.",
   plannerName: "Arun",
   plannerTitle: "Founder & Lead Photographer",
   location: "London, UK",
-  email: "hello@unitedstoriesbyarun.com",
-  phone: "+44 (0) 20 7946 0912",
+  email: "info@unitedstoriesbyarun.co.uk",
+  phone: "+44 7769 500815",
+  turnaroundGuarantee: "Edited images delivered within 5 working days.",
+  experienceYears: "12+ Years",
   instagram: "https://www.instagram.com/united_stories_by__arun/",
   facebook: "facebook.com/unitedstoriesbyarun",
   pinterest: "pinterest.com/unitedstoriesbyarun",
@@ -72,11 +74,12 @@ export const siteConfig = {
   heroVideoSrc: "/Video-87580.mp4",
 
   bio: {
-    tagline: "Capturing authentic human connection through a cinematic, fine art lens.",
-    shortBio: "Hi, I'm Arun. I specialize in cinematic, emotional, and fine art wedding and couple photography based in London. My approach is grounded in quiet authenticity, natural light, and storytelling so every tear, laugh, and glance is preserved forever.",
+    tagline: "Capturing timeless memories through storytelling photography for over 12 years.",
+    shortBio: "Capturing timeless memories through storytelling photography for over 12 years. Based in the UK, I blend passion, emotion, and culture to create meaningful visuals. Let’s tell your story—beautifully and authentically.",
     extendedBio: [
-      "I believe that true photography isn't posed — it's felt. Whether I'm documenting a grand wedding in London, an intimate couple session along the Thames, or celebrating life milestones like maternity and graduation, my goal is to create imagery that evokes deep emotion for generations.",
-      "My team and I work closely with every couple and family to ensure a relaxed, natural environment where your genuine story shines through effortlessly."
+      "Capturing timeless memories through storytelling photography for over 12 years. Based in the UK, I blend passion, emotion, and culture to create meaningful visuals. Let’s tell your story—beautifully and authentically.",
+      "Whether documenting a romantic central London couple shoot, a glowing maternity portrait, or a joyous preschool milestone, every session is approached with artistic dedication, patience, and fine-art color grading.",
+      "Guarantee: All high-resolution edited images are delivered in your private online gallery within 5 working days."
     ],
     photo: "/arun.webp"
   },
@@ -86,61 +89,75 @@ export const siteConfig = {
       id: "1",
       image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2000&q=80",
       tagline: "Authentic, Emotional & Fine Art",
-      subtext: "Cinematic wedding & couple photography in London & worldwide.",
-      ctaText: "Explore Weddings",
+      subtext: "Storytelling photography based in London & across the UK for over 12 years.",
+      ctaText: "Explore Collections",
       ctaLink: "/weddings"
     },
     {
       id: "2",
       image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2000&q=80",
-      tagline: "Destination Celebrations",
-      subtext: "From London historic venues to European coastal estates.",
-      ctaText: "Discover Destinations",
-      ctaLink: "/destinations"
+      tagline: "Love in London Sessions",
+      subtext: "Romantic couple & engagement portraiture in iconic London locations.",
+      ctaText: "Book Couple Session",
+      ctaLink: "/contact"
     },
     {
       id: "3",
       image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=2000&q=80",
-      tagline: "Milestone Portraiture",
-      subtext: "Couples, maternity, and graduation sessions in London.",
-      ctaText: "View Our Work",
+      tagline: "Motherhood & Milestone Portraiture",
+      subtext: "Maternity, early childhood, and graduation stories.",
+      ctaText: "View Portfolio",
       ctaLink: "/portfolio"
     }
   ],
 
   services: [
     {
-      id: "wedding-photography",
-      title: "Cinematic Wedding Photography",
-      subtitle: "Full-day wedding documentation with fine art editorial curation",
-      priceStarting: "Inquire for Pricing",
-      badge: "Signature Collection",
-      description: "Bespoke full-day wedding documentation tailored to your vision.",
+      id: "motherhood-london",
+      title: "Motherhood in London – Maternity Photoshoot ✨",
+      subtitle: "Professional maternity photoshoot in Central London celebrating the beauty of motherhood.",
+      priceStarting: "£200.00",
+      badge: "Popular Milestone",
+      description: "Celebrate the beauty of motherhood with a professional maternity photoshoot in Central London.",
       features: [
-        "To be filled",
-        "Custom photography quote on request"
+        "1 Hour Photoshoot",
+        "Central London Location (Westminster, Big Ben, Tower Bridge, London Eye & more)",
+        "20 Professionally Edited Images",
+        "All Raw Images Included",
+        "Online Gallery Delivery",
+        "Suitable for Solo, Couple & Family Photos",
+        "Fast 5 working days delivery guarantee"
       ]
     },
     {
-      id: "couple-sessions",
-      title: "Couple & Engagement Stories",
-      subtitle: "Intimate, cinematic couple portraiture across London",
-      priceStarting: "Inquire for Pricing",
-      description: "Intimate couple and engagement portraiture across London.",
+      id: "love-in-london",
+      title: "Love in London – Couple Photoshoot",
+      subtitle: "2-Hour Photoshoot in 2 iconic Central London locations",
+      priceStarting: "£200.00",
+      badge: "Signature Session",
+      description: "Celebrate your love with a romantic couple photoshoot in the heart of Central London. Perfect for anniversaries, engagements, or simply capturing memories together.",
       features: [
-        "To be filled",
-        "Custom photography quote on request"
+        "📸 2-Hour Photoshoot | 2 Locations of your choice",
+        "Professional guidance and posing help throughout the shoot",
+        "High-quality edited photo gallery to remember your day",
+        "Perfect for anniversaries, engagements, or memories together",
+        "Edited images delivered within 5 working days"
       ]
     },
     {
-      id: "maternity-graduation",
-      title: "Maternity & Graduation Milestones",
-      subtitle: "Authentic portrait sessions capturing personal & family milestones",
-      priceStarting: "Inquire for Pricing",
-      description: "Fine-art maternity and graduation milestone portraiture.",
+      id: "preschool-portrait",
+      title: "Preschool Portrait Session (Age 2–5)",
+      subtitle: "Magical early childhood photoshoot capturing unique expressions & personality",
+      priceStarting: "£150.00",
+      badge: "Childhood Milestones",
+      description: "Celebrate the joy and innocence of early childhood with a magical preschool photoshoot. Perfect for ages 2 to 5, this session captures your little one’s unique expressions, personality, and milestones in a natural and artistic style.",
       features: [
-        "To be filled",
-        "Custom photography quote on request"
+        "📸 1-Hour outdoor shoot",
+        "15 High-resolution edited images",
+        "Online gallery for easy download",
+        "Outfit guidance and styling tips",
+        "Captures unique expressions & personality in a natural, artistic style",
+        "Edited images delivered within 5 working days"
       ]
     }
   ] as ServiceTier[],
@@ -151,32 +168,8 @@ export const siteConfig = {
       name: "London & Home Counties",
       region: "United Kingdom",
       image: "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1200&q=80",
-      description: "Historic grand venues, regal cityscapes, candlelit conservatories, and intimate London garden receptions.",
-      highlights: ["Historic Manor Estates", "Regal City Architecture", "Iconic Thames & Park Sessions"]
-    },
-    {
-      id: "lake-como",
-      name: "Lake Como & Tuscany",
-      region: "Italy",
-      image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
-      description: "Classic Italian romance amidst Renaissance villas, lakeside garden ceremonies, and golden hour light.",
-      highlights: ["Historic Lakeside Villas", "Sunset Boat Shoots", "Vineyard Receptions"]
-    },
-    {
-      id: "provence",
-      name: "Provence & French Riviera",
-      region: "France",
-      image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80",
-      description: "Lavender blooms on sun-kissed châteaux grounds, Mediterranean warmth, and fine art golden hour portraiture.",
-      highlights: ["Château Gardens", "Lavender Fields", "Côte d'Azur Terraces"]
-    },
-    {
-      id: "amalfi",
-      name: "Amalfi Coast & Capri",
-      region: "Italy",
-      image: "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
-      description: "Dramatic cliffside ocean panoramas, Mediterranean citrus blooms, and intimate seaside portraiture.",
-      highlights: ["Cliffside Ocean Views", "Limoncello Groves", "Terrace Ceremonies"]
+      description: "Historic grand venues, regal cityscapes, candlelit conservatories, and iconic London locations like Westminster, Big Ben & Tower Bridge.",
+      highlights: ["Iconic London Landmarks", "Historic Manor Estates", "Regal City Architecture"]
     }
   ] as Destination[],
 
@@ -185,32 +178,32 @@ export const siteConfig = {
   testimonials: [
     {
       id: "t1",
-      pullQuote: "Pure Emotion & Cinematic Magic",
-      quote: "Arun transformed our wedding day into a work of art. Looking through our gallery felt like watching a fine art movie of our love. He made us feel completely relaxed, present, and comfortable.",
+      pullQuote: "Pure Emotion & Storytelling Magic",
+      quote: "Arun has over 12 years of experience and it truly shows. He captured our London couple session so authentically. We received our fully edited gallery in just 5 working days!",
       coupleName: "Genevieve & Alexander",
-      location: "London & Lake Como",
-      venue: "Villa Balbiano",
-      date: "September 2025",
+      location: "London, UK",
+      venue: "Tower Bridge & Westminster",
+      date: "2026",
       image: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80"
     },
     {
       id: "t2",
-      pullQuote: "Breathtaking & Authentic Storytelling",
-      quote: "Working with United Stories by Arun was the best choice for our wedding. Every picture captures true raw emotion without looking forced or staged. Our families were moved to tears.",
+      pullQuote: "Breathtaking Maternity Story",
+      quote: "Our Motherhood in London maternity session was incredible. Arun guided us effortlessly at Big Ben and the London Eye. Having all raw images plus 20 gorgeous edits delivered so fast was amazing.",
       coupleName: "Camille & Julian",
       location: "London, UK",
-      venue: "Mayfair Townhouse",
-      date: "June 2025",
+      venue: "Central London Landmark Shoot",
+      date: "2026",
       image: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=400&q=80"
     },
     {
       id: "t3",
-      pullQuote: "A True Artist of Light and Heart",
-      quote: "Arun did both our engagement couple session and our maternity portraits. His eye for light, tone, and genuine human connection is extraordinary. We will treasure these forever.",
-      coupleName: "Eleanor & James",
+      pullQuote: "Magical Preschool Portrait Session",
+      quote: "Arun was so patient and wonderful with our 3-year-old daughter. The outdoor shoot felt natural and playful, and the 15 edited photos capture her true personality beautifully.",
+      coupleName: "Eleanor & Family",
       location: "London, UK",
-      venue: "Richmond Park",
-      date: "October 2025",
+      venue: "London Park Outdoor Shoot",
+      date: "2026",
       image: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=400&q=80"
     }
   ] as Testimonial[],
@@ -218,47 +211,47 @@ export const siteConfig = {
   blogPosts: [
     {
       id: "b1",
-      slug: "cinematic-wedding-photography-london",
-      title: "Mastering Natural Light: The Secrets of Cinematic Fine Art Photography",
-      category: "Photography Insights",
+      slug: "motherhood-in-london-maternity-photoshoot",
+      title: "Motherhood in London: Planning Your Iconic Central London Maternity Shoot",
+      category: "Maternity Guide",
       readTime: "4 min read",
-      publishDate: "July 28, 2026",
-      excerpt: "Discover how we harness London's atmospheric light to create soft, romantic, and emotional imagery that stands the test of time.",
-      coverImage: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1000&q=80",
+      publishDate: "August 2026",
+      excerpt: "Tips for celebrating the beauty of motherhood at iconic London locations like Westminster, Big Ben, and Tower Bridge.",
+      coverImage: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1000&q=80",
       author: "Arun",
       content: [
-        "Cinematic photography is rooted in real human emotion. Rather than forcing rigid poses, we focus on quiet moments — a subtle hand touch, a shared laugh, or soft morning light through cathedral glass.",
-        "In London, our unique weather offers some of the softest, most romantic natural lighting in the world. Learning to compose with shadows and natural reflections brings out a deep fine art painterly quality."
+        "Motherhood is one of life's most profound chapters. Celebrating this journey against the backdrop of iconic Central London locations like Westminster, Big Ben, Tower Bridge, and the London Eye creates timeless art.",
+        "With 20 professionally edited images, all raw files included, and a fast 5 working day gallery turnaround, your maternity story is preserved with care."
       ]
     },
     {
       id: "b2",
-      slug: "preparing-for-your-couple-session",
-      title: "How to Feel Completely Relaxed & Natural During Your Couple Session",
-      category: "Client Guide",
+      slug: "love-in-london-couple-photoshoot-guide",
+      title: "Love in London: Making the Most of Your 2-Hour Central London Couple Session",
+      category: "Couple Guide",
       readTime: "5 min read",
-      publishDate: "June 15, 2026",
-      excerpt: "Nervous in front of the camera? Here are our top tips for enjoying a authentic, romantic couple shoot across London.",
+      publishDate: "August 2026",
+      excerpt: "How to choose 2 complimentary London locations and feel natural in front of the lens with professional posing guidance.",
       coverImage: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1000&q=80",
       author: "Arun",
       content: [
-        "Most couples tell us 'we're not camera confident' before their session! That's completely normal. Our goal is never to have you pose stiffly, but to create a date-night experience where you focus on each other.",
-        "We choose serene, picturesque London locations at golden hour so you have room to breathe, walk, and share genuine laughter."
+        "A 2-hour couple photoshoot allows you to explore two distinct London settings — from romantic cobbled alleys to sweeping river views along the Thames.",
+        "With over 12 years of storytelling photography experience, Arun provides comfortable, natural posing help so you can simply focus on each other."
       ]
     },
     {
       id: "b3",
-      slug: "celebrating-life-milestones-maternity-graduation",
-      title: "Beyond Weddings: Preserving Life’s Great Milestones in Fine Art Style",
-      category: "Milestones",
+      slug: "preschool-portrait-session-tips",
+      title: "Preschool Portraits (Age 2–5): Capturing Genuine Early Childhood Joy",
+      category: "Childhood Milestones",
       readTime: "4 min read",
-      publishDate: "May 20, 2026",
-      excerpt: "From glowing maternity portraits to graduation honors, why milestone photography deserves the same cinematic care as your wedding day.",
-      coverImage: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1000&q=80",
+      publishDate: "August 2026",
+      excerpt: "Why outdoor, relaxed portraiture brings out your toddler's genuine expressions and personality.",
+      coverImage: "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=1000&q=80",
       author: "Arun",
       content: [
-        "Life is a tapestry of milestone chapters. A glowing maternity portrait or a proud graduation portrait is a testament to growth, legacy, and joy.",
-        "We bring the exact same fine art lens, color palette, and emotional sensitivity to milestone portraiture as we do to grand international weddings."
+        "Early childhood passes in a blink. Our 1-hour outdoor preschool sessions for ages 2 to 5 give little ones the freedom to play, laugh, and express themselves naturally.",
+        "We provide complete outfit guidance and deliver 15 high-resolution edited images in your private online gallery within 5 working days."
       ]
     }
   ] as BlogPost[],
@@ -266,21 +259,21 @@ export const siteConfig = {
   secondaryEvents: [
     {
       id: "e1",
-      title: "Maternity & Family Stories",
-      image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=1000&q=80",
-      description: "Intimate fine art maternity and early family portraiture captured in natural light in London or outdoor estate settings."
+      title: "Motherhood in London – Maternity Photoshoot ✨",
+      image: "/portfolio/maternity/01.webp",
+      description: "Celebrate the beauty of motherhood with a professional maternity photoshoot in Central London (£200.00)."
     },
     {
       id: "e2",
-      title: "Graduation & Academic Honors",
-      image: "/portfolio/graduation/07.webp",
-      description: "Timeless, dignified graduation portraits for students and families celebrating major academic achievements."
+      title: "Love in London – Couple Photoshoot",
+      image: "/portfolio/pre-wedding/01_1.webp",
+      description: "2-Hour photoshoot across 2 Central London locations capturing your authentic love story (£200.00)."
     },
     {
       id: "e3",
-      title: "Anniversary & Private Celebrations",
-      image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1000&q=80",
-      description: "Cinematic documentation for silver & golden anniversaries, milestone birthday galas, and private family reunions."
+      title: "Preschool Portrait Session (Age 2–5)",
+      image: "/portfolio/graduation/07.webp",
+      description: "Magical 1-hour outdoor shoot capturing your little one's expressions and early childhood joy (£150.00)."
     }
   ]
 };

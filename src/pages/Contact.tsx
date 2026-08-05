@@ -9,7 +9,7 @@ export const Contact: React.FC = () => {
     names: '',
     email: '',
     phone: '',
-    sessionType: 'Wedding Photography',
+    sessionType: 'Motherhood in London – Maternity (£200)',
     date: '',
     location: '',
     message: ''
@@ -23,9 +23,9 @@ export const Contact: React.FC = () => {
       setSubmitted(true);
 
       // Construct Mailto prefilled email link
-      const subject = encodeURIComponent(`Photography Inquiry & Quote Request: ${formData.sessionType} — ${formData.names}`);
+      const subject = encodeURIComponent(`Photography Inquiry: ${formData.sessionType} — ${formData.names}`);
       const body = encodeURIComponent(
-        `Hello Arun,\n\nI would like to request a quote for photography services.\n\nName(s): ${formData.names}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSession Type: ${formData.sessionType}\nTarget Date: ${formData.date}\nLocation/Venue: ${formData.location}\n\nVision & Details:\n${formData.message}\n\nThank you!`
+        `Hello Arun,\n\nI would like to request a quote / book a session.\n\nName(s): ${formData.names}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSession Package: ${formData.sessionType}\nTarget Date: ${formData.date}\nLocation/Venue: ${formData.location}\n\nVision & Details:\n${formData.message}\n\nThank you!`
       );
       
       // Trigger user's default email app
@@ -36,14 +36,14 @@ export const Contact: React.FC = () => {
   return (
     <>
       <SEO
-        title="Contact & Photography Quote Inquiry — United Stories by Arun"
-        description={`Inquire about wedding photography, couple sessions, maternity, and graduation portraiture with ${siteConfig.businessName} in ${siteConfig.location} and worldwide.`}
+        title="Contact & Book a Session — United Stories by Arun"
+        description={`Inquire about maternity photoshoot, couple sessions, and preschool portraits with ${siteConfig.businessName} in ${siteConfig.location}. Edited images delivered within 5 working days.`}
       />
 
       <main className="bg-[#FDFBF7]">
         <PageHeader
-          title="Inquire & Request a Quote"
-          subtitle="We take a select number of wedding, couple, and milestone sessions each year to ensure every story receives our dedicated artistry and focus."
+          title="Inquire & Book Your Session"
+          subtitle="Storytelling photography capturing authentic moments, passion, and culture across London & the UK. Edited images delivered within 5 working days."
           badge="Reserve Your Session"
           backgroundImage="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2000&q=80"
         />
@@ -62,7 +62,7 @@ export const Contact: React.FC = () => {
                     Thank You, {formData.names}!
                   </h3>
                   <p className="text-base text-[#65605C] font-light max-w-md mx-auto leading-relaxed">
-                    We have received your photography quote inquiry. {siteConfig.plannerName} will review your details and reach out within 24 business hours.
+                    We have received your session inquiry. {siteConfig.plannerName} will review your details and reach out shortly. Edited images guaranteed within 5 working days!
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
@@ -78,7 +78,7 @@ export const Contact: React.FC = () => {
                       Photography Inquiry
                     </span>
                     <h3 className="font-serif text-3xl text-[#2C2A29]">
-                      Tell Us About Your Vision
+                      Tell Us About Your Session
                     </h3>
                   </div>
 
@@ -104,7 +104,7 @@ export const Contact: React.FC = () => {
                       <input
                         type="email"
                         required
-                        placeholder="hello@example.com"
+                        placeholder="info@unitedstoriesbyarun.co.uk"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         className="w-full bg-[#FDFBF7] border border-[#2C4A3E]/20 rounded-xl px-4 py-3 text-xs text-[#2C2A29] focus:outline-none focus:border-[#2C4A3E]"
@@ -119,7 +119,7 @@ export const Contact: React.FC = () => {
                       </label>
                       <input
                         type="tel"
-                        placeholder="+44 7000 000000"
+                        placeholder="+44 7769 500815"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full bg-[#FDFBF7] border border-[#2C4A3E]/20 rounded-xl px-4 py-3 text-xs text-[#2C2A29] focus:outline-none focus:border-[#2C4A3E]"
@@ -128,19 +128,17 @@ export const Contact: React.FC = () => {
 
                     <div>
                       <label className="block text-xs font-semibold uppercase tracking-wider text-[#2C2A29] mb-2">
-                        Session Category
+                        Session Package
                       </label>
                       <select
                         value={formData.sessionType}
                         onChange={(e) => setFormData({ ...formData, sessionType: e.target.value })}
                         className="w-full bg-[#FDFBF7] border border-[#2C4A3E]/20 rounded-xl px-4 py-3 text-xs text-[#2C2A29] focus:outline-none focus:border-[#2C4A3E]"
                       >
-                        <option value="Wedding Photography">Wedding Photography</option>
-                        <option value="Couple & Pre-Wedding Session">Couple & Pre-Wedding Session</option>
-                        <option value="Maternity Portraiture">Fine Art Maternity Shoot</option>
-                        <option value="Graduation Milestone">Graduation Milestone</option>
-                        <option value="Destination Elopement">Destination Elopement</option>
-                        <option value="Other Fine Art Session">Other Fine Art Session</option>
+                        <option value="Motherhood in London – Maternity (£200)">Motherhood in London – Maternity (£200.00)</option>
+                        <option value="Love in London – Couple Photoshoot (£200)">Love in London – Couple Shoot (£200.00)</option>
+                        <option value="Preschool Portrait Session Age 2–5 (£150)">Preschool Portrait Session (£150.00)</option>
+                        <option value="Custom Wedding & Event Story">Custom Wedding & Celebration</option>
                       </select>
                     </div>
                   </div>
