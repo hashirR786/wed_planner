@@ -15,21 +15,47 @@ export const Contact: React.FC = () => {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.names && formData.email) {
+    if (!formData.names || !formData.email) return;
+
+    setIsSubmitting(true);
+
+    const emailSubject = `New Session Inquiry: ${formData.sessionType} — ${formData.names}`;
+    const emailBody = `Name(s): ${formData.names}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSession Package: ${formData.sessionType}\nTarget Date: ${formData.date}\nLocation: ${formData.location}\n\nVision & Details:\n${formData.message}`;
+
+    try {
+      // Send automated background email via FormSubmit AJAX directly to info@unitedstoriesbyarun.co.uk
+      await fetch(`https://formsubmit.co/ajax/${siteConfig.email}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: emailSubject,
+          _captcha: 'false',
+          name: formData.names,
+          email: formData.email,
+          phone: formData.phone,
+          sessionPackage: formData.sessionType,
+          targetDate: formData.date,
+          location: formData.location,
+          details: formData.message,
+        })
+      });
+    } catch (err) {
+      console.warn('FormSubmit AJAX fallback:', err);
+    } finally {
+      setIsSubmitting(false);
       setSubmitted(true);
 
-      // Construct Mailto prefilled email link
-      const subject = encodeURIComponent(`Photography Inquiry: ${formData.sessionType} — ${formData.names}`);
-      const body = encodeURIComponent(
-        `Hello Arun,\n\nI would like to request a quote / book a session.\n\nName(s): ${formData.names}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSession Package: ${formData.sessionType}\nTarget Date: ${formData.date}\nLocation/Venue: ${formData.location}\n\nVision & Details:\n${formData.message}\n\nThank you!`
-      );
-      
-      // Trigger user's default email app
-      window.location.href = `mailto:${siteConfig.email}?subject=${subject}&body=${body}`;
+      // Also trigger mailto as fallback so client's mail app opens prefilled
+      const mailtoUrl = `mailto:${siteConfig.email}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = mailtoUrl;
     }
   };
 
@@ -186,9 +212,10 @@ export const Contact: React.FC = () => {
 
                   <button
                     type="submit"
-                    className="w-full btn-terracotta justify-center py-4 text-xs tracking-[0.2em] flex items-center gap-2"
+                    disabled={isSubmitting}
+                    className="w-full btn-terracotta justify-center py-4 text-xs tracking-[0.2em] flex items-center gap-2 disabled:opacity-50"
                   >
-                    <Send size={15} /> Send Inquiry & Request Quote
+                    <Send size={15} /> {isSubmitting ? 'Sending Inquiry...' : 'Send Inquiry & Request Quote'}
                   </button>
                 </form>
               )}
