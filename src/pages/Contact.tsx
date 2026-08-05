@@ -264,8 +264,8 @@ export const Contact: React.FC = () => {
                     <Clock size={18} className="text-[#E09F87] shrink-0 mt-0.5" />
                     <div>
                       <span className="font-medium text-white block">Studio Hours</span>
-                      <span>Monday – Friday: 9:00 AM – 6:00 PM</span>
-                      <span className="block text-xs text-white/60">Weekends dedicated to client photography sessions</span>
+                      <span>Monday – Sunday: 09:00 – 18:00</span>
+                      <span className="block text-xs text-white/60">Sessions available by appointment</span>
                     </div>
                   </div>
                 </div>
