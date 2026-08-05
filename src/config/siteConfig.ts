@@ -59,7 +59,7 @@ export const siteConfig = {
   businessName: "United Stories by Arun",
   businessTagline: "Authentic, Emotional & Fine Art Imagery",
   businessSubtext: "Capturing timeless memories through storytelling photography for over 12 years in London & the UK.",
-  plannerName: "Arun",
+  plannerName: "Arun Meluha",
   plannerTitle: "Founder & Lead Photographer",
   location: "London, UK",
   email: "info@unitedstoriesbyarun.co.uk",

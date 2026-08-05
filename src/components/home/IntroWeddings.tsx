@@ -90,7 +90,7 @@ export const IntroWeddings: React.FC<IntroWeddingsProps> = ({ onNavigate }) => {
                   "Capturing timeless memories through storytelling photography for over 12 years... Let’s tell your story — beautifully and authentically."
                 </p>
                 <span className="text-xs uppercase tracking-widest text-[#2C2A29] font-medium block">
-                  — Arun, Founder & Lead Photographer (12+ Years Experience)
+                  — {siteConfig.plannerName}, Founder & Lead Photographer (12+ Years Experience)
                 </span>
               </div>
             </div>
