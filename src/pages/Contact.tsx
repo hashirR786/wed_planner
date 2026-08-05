@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { SEO } from '../components/ui/SEO';
 import { PageHeader } from '../components/shared/PageHeader';
 import { siteConfig } from '../config/siteConfig';
+import { getAssetUrl } from '../utils/asset';
 import { Mail, Phone, MapPin, CheckCircle2, Clock, Send } from 'lucide-react';
 
 export const Contact: React.FC = () => {
@@ -226,7 +227,7 @@ export const Contact: React.FC = () => {
               <div className="bg-[#2C4A3E] text-[#FDFBF7] p-8 sm:p-10 rounded-3xl space-y-6 shadow-xl">
                 <div>
                   <img
-                    src="/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png"
+                    src={getAssetUrl("/Gemini_Generated_Image_rye0vdrye0vdrye0-removebg-preview.png")}
                     alt="United Stories by Arun"
                     className="h-16 w-auto object-contain filter brightness-0 invert"
                   />

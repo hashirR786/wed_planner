@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../../utils/asset';
 
 interface PageHeaderProps {
   title: string;
@@ -18,7 +19,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={backgroundImage}
+          src={backgroundImage.startsWith('http') ? backgroundImage : getAssetUrl(backgroundImage)}
           alt={title}
           className="w-full h-full object-cover opacity-35"
         />
